@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <section name="log4net" type="log4net.Config.Log4NetConfigurationSectionHandler, log4net" />
+  </configSections>
+  <startup> 
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.1" />
+  </startup>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="System.Interactive.Async" publicKeyToken="94bc3704cddfc263" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-3.0.3000.0" newVersion="3.0.3000.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Net.Http" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-4.1.1.0" newVersion="4.1.1.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Diagnostics.DiagnosticSource" publicKeyToken="cc7b13ffcd2ddd51" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-4.0.1.0" newVersion="4.0.1.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-11.0.0.0" newVersion="11.0.0.0" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+  <log4net>
+    <appender name="Console" type="log4net.Appender.ConsoleAppender">
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%date %-5level: %message%newline" />
+      </layout>
+    </appender>
+    <appender name="LogFileAppender" type="log4net.Appender.RollingFileAppender">
+      <param name="File" value="C:\home-assistant\DiscordBotService.log" />
+      <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+      <appendToFile value="true" />
+      <rollingStyle value="Size" />
+      <maxSizeRollBackups value="2" />
+      <maximumFileSize value="100MB" />
+      <staticLogFileName value="true" />
+      <layout type="log4net.Layout.PatternLayout">
+        <param name="ConversionPattern" value="%d [%t] %-5p %c %m%n" />
+      </layout>
+    </appender>
+    <root>
+      <level value="ALL" />
+      <appender-ref ref="Console" />
+      <appender-ref ref="LogFileAppender" />
+    </root>
+  </log4net>  
+  <appSettings>
+    <add key="maxLinesLimit" value="15" />
+    <add key="token" value="abcdefghijklmnopqrstuvwxyz.abcdef.abcdefghijklmnopqrstuvwxyz" />
+    <add key="sitemapUrl" value="https://home-assistant.io/sitemap.xml" />
+    <add key="sitemapPath" value="C:\home-assistant\sitemap.xml" />
+    <add key="commandsFile" value="C:\home-assistant\commands.json" />
+    <add key="afkUsersFile" value="C:\home-assistant\away.json" />
+    <add key="deleteHoundBotMsgs" value="true" />
+    <add key="serverGuild" value="330944238910963714" />
+    <add key="discordServerName" value="Home Assistant" />
+    <add key="mods" value="skalavala, Tinkerer, Vasiley, dale3h, quadflight, zombu2, Ludeeus" />
+    <add key="botspamChannel" value="&lt;#412217573904744448&gt;" />
+    <add key="maxLineLimitMessage" value="Attention!: Please use https://www.hastebin.com to share code that is more than 10-15 lines. You have been warned, {0}!&#xD;&#xA;Please read rule #6 here &lt;#331130181102206976&gt;" />
+    <add key="welcomerulesChannel" value="&lt;#331130181102206976&gt;" />
+    <add key="channel_general" value="400033312929742879"/>
+    <add key="channel_projects" value="411972631680647189"/>
+  </appSettings>
+</configuration>
