@@ -1,0 +1,34 @@
+################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+# obj folders
+/DiscordbotLib/obj
+/HassBotApp/obj
+/HassBotData/obj
+/HassBotDTO/obj
+/HassBotUtils/obj
+
+# bin folders
+/DiscordbotLib/bin
+/HassBotApp/bin
+/HassBotData/bin
+/HassBotDTO/bin
+/HassBotUtils/bin
+
+# .config files
+/DiscordbotLib/*.config
+/HassBotApp/*.config
+/HassBotData/*.config
+/HassBotDTO/*.config
+/HassBotUtils/*.config
+/Output/*.config
+
+/packages
+.vs
+secret.txt
+!HassBotData/packages.config
+!HassBotDTOs/packages.config
+!DiscordBotLib/packages.config
+!HassBotUtils/packages.config
+!HassBotApp/packages.config
