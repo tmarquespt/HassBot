@@ -35,7 +35,7 @@ namespace DiscordBotLib
         }
 
         private async Task LookupCommand(string input) {
-            string result = LookupMagic(input);
+            string result = Helper.LookupString(input);
             result = result.Trim();
 
             // mention users if any
@@ -53,55 +53,6 @@ namespace DiscordBotLib
                 embed.AddInlineField("Here is what I found: :smile:", mentionedUsers + result);
             }
             await ReplyAsync(string.Empty, false, embed);
-        }
-
-        private static string LookupMagic(string searchString) {
-            string[] searchWords = null;
-            StringBuilder sb = new StringBuilder();
-            XmlDocument doc = Sitemap.SiteMapXmlDocument;
-
-            searchString = searchString.Replace('.', ' ').Replace('_', ' ').Replace('-', ' ').ToLower();
-            if (searchString.Contains(" "))
-                searchWords = searchString.Split(' ');
-            else
-                searchWords = new string[] { searchString };
-
-            if (null == searchWords)
-                return string.Empty;
-
-            Array.Sort(searchWords);
-
-            foreach (XmlNode item in doc.DocumentElement.ChildNodes) {
-                string location = string.Empty;
-                string[] sitemapWords = null;
-
-                string loc = item.FirstChild.InnerText;
-                if (loc.EndsWith("/")) {
-                    int index = loc.LastIndexOf("/", (loc.Length - 2));
-                    location = loc.Substring((index) + 1, ((loc.Length - index) - 2));
-                }
-                else {
-                    int index = loc.LastIndexOf("/", loc.Length);
-                    location = loc.Substring((index) + 1, ((loc.Length - index) - 1));
-                }
-
-                location = location.Replace('.', ' ').Replace('_', ' ').Replace('-', ' ').ToLower();
-                if (location.Contains(" "))
-                    sitemapWords = location.Split(' ');
-                else
-                    sitemapWords = new string[] { location };
-
-                if (null == sitemapWords)
-                    continue;
-
-                Array.Sort(sitemapWords);
-                if (string.Join("", searchWords) == string.Join("", sitemapWords)) {
-                    sb.Append(item.FirstChild.InnerText);
-                    sb.Append("\n");
-                }
-            }
-
-            return sb.ToString();
         }
 
         [Command("deepsearch")]

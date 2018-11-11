@@ -140,13 +140,6 @@
     "CommandCount": 1
   },
   {
-    "CommandName": "condition",
-    "CommandData": "Conditions can be used within a script or automation to prevent further execution. See <https://home-assistant.io/docs/scripts/conditions/> for details.",
-    "CommandAuthor": "<@!284395792800677889>",
-    "CommandCreatedDate": "2018-03-16T17:05:30.8343367-04:00",
-    "CommandCount": 1
-  },
-  {
     "CommandName": "hadashboard",
     "CommandData": "HADashboard is a dashboard for Home Assistant that is intended to be wall mounted, and is optimized for distance viewing: <http://appdaemon.readthedocs.io/en/latest/DASHBOARD_INSTALL.html>",
     "CommandAuthor": "<@!284395792800677889>",
@@ -187,13 +180,6 @@
     "CommandAuthor": "<@!284395792800677889>",
     "CommandCreatedDate": "2018-03-22T03:19:39.9285931-04:00",
     "CommandCount": 2
-  },
-  {
-    "CommandName": "zwave_stick_alias",
-    "CommandData": "```shell\n$ sudo su && echo 'SUBSYSTEM==\\\"tty\\\", ATTRS{idVendor}==\\\"0658\\\", ATTRS{idProduct}==\\\"0200\\\", SYMLINK+=\\\"zwave\\\"' > /etc/udev/rules.d/99-usb-serial.rules && reboot now\n```",
-    "CommandAuthor": "<@!284395792800677889>",
-    "CommandCreatedDate": "2018-03-25T12:44:59.1392215-04:00",
-    "CommandCount": 3
   },
   {
     "CommandName": "rkaramandi",
@@ -392,13 +378,6 @@
     "CommandCount": 3
   },
   {
-    "CommandName": "repos",
-    "CommandData": "You can find a number of people's GitHub repositories at <https://github.com/topics/home-assistant-config> - these are their working configurations, not simply documentation examples",
-    "CommandAuthor": "<@!284395792800677889>",
-    "CommandCreatedDate": "2018-04-01T21:07:28.5713695-04:00",
-    "CommandCount": 11
-  },
-  {
     "CommandName": "haaska",
     "CommandData": "Use <https://github.com/auchter/haaska> to communicate with your Alexa.",
     "CommandAuthor": "<@!284395792800677889>",
@@ -567,20 +546,6 @@
     "CommandCount": 5
   },
   {
-    "CommandName": "ludeeus",
-    "CommandData": "There may (or may not) be some useful stuff here <https://gitlab.com/ludeeus> 🤷",
-    "CommandAuthor": "<@!194499346027249664>",
-    "CommandCreatedDate": "2018-06-09T09:10:28.8546932-04:00",
-    "CommandCount": 3
-  },
-  {
-    "CommandName": "json",
-    "CommandData": "You can check validity of JSON at <http://www.jsonlint.com> or parse JSON here <https://jqplay.org/>",
-    "CommandAuthor": "<@!331436841817604097>",
-    "CommandCreatedDate": "2018-06-11T11:03:07.6676602-04:00",
-    "CommandCount": 9
-  },
-  {
     "CommandName": "norien",
     "CommandData": "Check out my repo and take a peak https://github.com/Norien/Home-Assistant-Config",
     "CommandAuthor": "<@!331199286811295745>",
@@ -679,20 +644,6 @@
     "CommandCount": 9
   },
   {
-    "CommandName": "sinker1345",
-    "CommandData": "Have a peek at my git maybe it can help https://github.com/sinker1345/Home-Assistant-Configuration",
-    "CommandAuthor": "<@!331199286811295745>",
-    "CommandCreatedDate": "2018-08-05T16:18:42.6064805-04:00",
-    "CommandCount": 8
-  },
-  {
-    "CommandName": "flowolf",
-    "CommandData": "Have a look at flowolf's config at <https://github.com/flowolf/homeassistant-config>",
-    "CommandAuthor": "<@!284395792800677889>",
-    "CommandCreatedDate": "2018-08-06T10:33:38.5372834-04:00",
-    "CommandCount": 4
-  },
-  {
     "CommandName": "jedi",
     "CommandData": "The **Jedi** role (*blue*) is given to our community members who have proven themselves knowledgable and worthy of helping others. *Please do not request to be assigned this role. It must be earned.*",
     "CommandAuthor": "<@!284395792800677889>",
@@ -763,13 +714,6 @@
     "CommandCount": 13
   },
   {
-    "CommandName": "rules",
-    "CommandData": "5 Rules for better support:\n```\n1. Be very specific about the issue/problem you are facing (A problem clearly stated is a problem half solved)\n2. Absolutely NO negative comments or thoughts about individuals, developers or the community\n3. Read the documentation (RTFM). It is an open source product, you are allowed to contribute, but not whine\n4. Every setup is unique in its own way. Share your config, code, logs and other relevant info via hastebin.com\n5. Keep the channel live by being friendly, offer help where you can, learn when you can't!\n```\nWe are thankful to all the members who dedicate their personal time helping others.",
-    "CommandAuthor": "<@!284395792800677889>",
-    "CommandCreatedDate": "2018-08-27T16:03:39.9234961-04:00",
-    "CommandCount": 7
-  },
-  {
     "CommandName": "hassbian_suites",
     "CommandData": "Hassbian suites are easy installable scripts custom made for Hassbian.\nHave a look at all the available suites for Hassbian in the repo <https://github.com/home-assistant/hassbian-scripts> or run `hassbian-config show`",
     "CommandAuthor": "<@!194499346027249664>",
@@ -833,13 +777,6 @@
     "CommandCount": 33
   },
   {
-    "CommandName": "32bit",
-    "CommandData": "The 32bit image is recomended over 64bit because of addon compatibility, performance issues and none of these boards has +4GB of RAM, so you would not get any real advantage with it.",
-    "CommandAuthor": "<@!194499346027249664>",
-    "CommandCreatedDate": "2018-09-19T05:58:08.3891551-04:00",
-    "CommandCount": 7
-  },
-  {
     "CommandName": "hastebin",
     "CommandData": "Use https://hastebin.com/ to share configuration files or log files.",
     "CommandAuthor": "<@!284395792800677889>",
@@ -851,13 +788,6 @@
     "CommandData": "Easily send files/text to hastebin.com from your CLI.\n\n**Installation:**\n```shell\n$ pip3 install haste-client\n```\n***Note:** `sudo` might be required in some cases.*\n\n**Example Usage (File):**\n```shell\n$ haste configuration.yaml\nhttps://hastebin.com/netidofibu\n```\n**Example Usage (Stream/Pipe):**\n```shell\n$ cat configuration.yaml | haste\nhttps://hastebin.com/netidofibu\n```",
     "CommandAuthor": "<@!284395792800677889>",
     "CommandCreatedDate": "2018-09-20T04:52:07.4410667-04:00",
-    "CommandCount": 3
-  },
-  {
-    "CommandName": "jinja",
-    "CommandData": "Jinja Template Designer Documentation: <http://jinja.pocoo.org/docs/dev/templates/>\nFor more examples and samples, visit <https://github.com/skalavala/smarthome/tree/master/jinja_helpers#jinja-code-for-ninjas>",
-    "CommandAuthor": "<@!331436841817604097>",
-    "CommandCreatedDate": "2018-09-21T17:12:51.7593469-04:00",
     "CommandCount": 3
   },
   {
@@ -945,27 +875,6 @@
     "CommandCount": 15
   },
   {
-    "CommandName": "rtfm",
-    "CommandData": "**RTFM** is a well known phrase, used when someone hasn't taken time to read the documentation. Please take time to Read The $%#@ Manual - author unknown.",
-    "CommandAuthor": "<@!284395792800677889>",
-    "CommandCreatedDate": "2018-10-08T18:14:50.8046377-04:00",
-    "CommandCount": 26
-  },
-  {
-    "CommandName": "breaking_change",
-    "CommandData": "Breaking changes in 0.79:\n```\n#16656 -  Netdata configuration change: Allows multiple elements per group. Specify the data_group as part of the sensor description. See docs for details.\n#14550 -  The Dyson sensor Air Quality Index is now named AQI following Dyson's mobile app\n```\nBlog post for this release: <https://www.home-assistant.io/blog/2018/09/28/release-79/#breaking-changes>",
-    "CommandAuthor": "<@!194499346027249664>",
-    "CommandCreatedDate": "2018-10-10T12:36:04.2489695-04:00",
-    "CommandCount": 3
-  },
-  {
-    "CommandName": "dshokouhi",
-    "CommandData": "Take a Peak at https://github.com/dshokouhi/Home-AssistantConfig and see if it helps",
-    "CommandAuthor": "<@!331199286811295745>",
-    "CommandCreatedDate": "2018-10-10T21:49:21.6757563-04:00",
-    "CommandCount": 40
-  },
-  {
     "CommandName": "which",
     "CommandData": "There's no right way of installing Home Assistant - each approach has advantages and disadvantages. If you're after the appliance like experience use Hass.io, if you know (or want to know) linux, use Hassbian. Beyond that, have a look at the long list of official options at <https://home-assistant.io/docs/installation/>. See Tinkerer's take at <https://blog.ceard.tech/2017/11/which-home-assistant-install-is-right.html>.",
     "CommandAuthor": "<@!331436841817604097>",
@@ -978,13 +887,6 @@
     "CommandAuthor": "<@!284395792800677889>",
     "CommandCreatedDate": "2018-10-12T08:42:17.2030954-04:00",
     "CommandCount": 9
-  },
-  {
-    "CommandName": "backup",
-    "CommandData": "Be sure to regularly, automatically, back up your Home Assistant install. There are various critical files and configuration options (like the Z-Wave network key), plus all your time. Hass.io has snapshots, and for unix type installs see <https://blog.ceard.tech/2017/10/backing-up-home-assistant.html>.  Oh, and most important of all **test your ability to restore regularly**.",
-    "CommandAuthor": "<@!331436841817604097>",
-    "CommandCreatedDate": "2018-10-12T11:50:53.3413965-04:00",
-    "CommandCount": 56
   },
   {
     "CommandName": "questions",
@@ -1001,27 +903,6 @@
     "CommandCount": 18
   },
   {
-    "CommandName": "ask",
-    "CommandData": "When you do ask a question, try to provide as much background detail as possible. Ask yourself these questions first so that others don't have to:\n\n1. *What version of the software are you running?*\n2. *What's your operating system?*\n3. *What exactly are you trying to do that won't work?*\n4. *Is the problem uniform or erratic?*\n5. *What's the exact error message?*\n6. *When did it arise?*\n7. *What exactly don't you \\\"get\\\"?*\n8. *Can you provide sample code, ideally with line errors where the error occurs?*",
-    "CommandAuthor": "<@!284395792800677889>",
-    "CommandCreatedDate": "2018-10-14T16:30:33.6760752-04:00",
-    "CommandCount": 51
-  },
-  {
-    "CommandName": "monster-card",
-    "CommandData": "Monster card is a magical type of card. Because it's dynamic if you're smart about it, you can have one card that adapts and that you don't need to touch when adding new entities & sensors to your setup. Supports both inclusion and exclusion filters with wildcard for `entity_id`: <https://github.com/ciotlosm/custom-lovelace/tree/master/monster-card>",
-    "CommandAuthor": "<@!284395792800677889>",
-    "CommandCreatedDate": "2018-10-15T12:59:42.2029632-04:00",
-    "CommandCount": 16
-  },
-  {
-    "CommandName": "packages",
-    "CommandData": "To enable packages, add `packages: !include_dir_named packages` to your `configuration.yaml` so that it looks similar to this:\n```yaml\nhomeassistant:\n  name: Home\n  latitude: !secret home_latitude\n  ...\n  packages: !include_dir_named packages\n```\n***Important:** The `packages:` line **must** be nested under `homeassistant:`!*\n\nFor more information on packages, please refer to the packages docs: <https://home-assistant.io/docs/configuration/packages/>",
-    "CommandAuthor": "<@!284395792800677889>",
-    "CommandCreatedDate": "2018-10-15T15:51:28.4759134-04:00",
-    "CommandCount": 26
-  },
-  {
     "CommandName": "lovelace",
     "CommandData": "Lovelace is the new experimental UI for Home-Assistant, to get started have a look at the documentation <https://www.home-assistant.io/lovelace>\nIf you have any questions or issues with it, head over to <#460846676358332417>",
     "CommandAuthor": "<@!194499346027249664>",
@@ -1029,59 +910,178 @@
     "CommandCount": 12
   },
   {
-    "CommandName": "skalavala",
-    "CommandData": "skalavala's  github repo is at <https://www.github.com/skalavala> and his cheat sheets are at <https://skalavala.github.io/>",
+    "CommandName": "json",
+    "CommandData": "You can check validity of JSON at <http://www.jsonlint.com> or parse JSON here <https://jqplay.org/>",
     "CommandAuthor": "<@!331436841817604097>",
-    "CommandCreatedDate": "2018-10-16T14:57:49.242337-04:00",
-    "CommandCount": 15
+    "CommandCreatedDate": "2018-10-23T16:55:44.4780994-04:00",
+    "CommandCount": 10
+  },
+  {
+    "CommandName": "rules",
+    "CommandData": "5 Rules for better support:\n```\n1. Be very specific about the issue/problem you are facing (A problem clearly stated is a problem half solved)\n2. Absolutely NO negative comments or thoughts about individuals, developers or the community\n3. Read the documentation (RTFM). It is an open source product, you are allowed to contribute, but not whine\n4. Every setup is unique in its own way. Share your config, code, logs and other relevant info via hastebin.com\n5. Keep the channel live by being friendly, offer help where you can, learn when you can't!\n```\nWe are thankful to all the members who dedicate their personal time helping others.",
+    "CommandAuthor": "<@!284395792800677889>",
+    "CommandCreatedDate": "2018-10-24T18:13:58.7085682-04:00",
+    "CommandCount": 8
+  },
+  {
+    "CommandName": "dshokouhi",
+    "CommandData": "Take a Peak at https://github.com/dshokouhi/Home-AssistantConfig and see if it helps",
+    "CommandAuthor": "<@!331199286811295745>",
+    "CommandCreatedDate": "2018-10-25T18:27:41.4735243-04:00",
+    "CommandCount": 41
+  },
+  {
+    "CommandName": "nocolaz",
+    "CommandData": "My Git Hub Repo  https://github.com/klaasnicolaas/Smarthome-homeassistant-config",
+    "CommandAuthor": "<@!331199286811295745>",
+    "CommandCreatedDate": "2018-10-25T19:28:45.2147664-04:00",
+    "CommandCount": 1
+  },
+  {
+    "CommandName": "monster-card",
+    "CommandData": "Monster card is a magical type of card. Because it's dynamic if you're smart about it, you can have one card that adapts and that you don't need to touch when adding new entities & sensors to your setup. Supports both inclusion and exclusion filters with wildcard for `entity_id`: <https://github.com/ciotlosm/custom-lovelace/tree/master/monster-card>",
+    "CommandAuthor": "<@!284395792800677889>",
+    "CommandCreatedDate": "2018-10-27T09:47:26.3528618-04:00",
+    "CommandCount": 17
+  },
+  {
+    "CommandName": "ask",
+    "CommandData": "When you do ask a question, try to provide as much background detail as possible. Ask yourself these questions first so that others don't have to:\n\n1. *What version of the software are you running?*\n2. *What's your operating system?*\n3. *What exactly are you trying to do that won't work?*\n4. *Is the problem uniform or erratic?*\n5. *What's the exact error message?*\n6. *When did it arise?*\n7. *What exactly don't you \\\"get\\\"?*\n8. *Can you provide sample code, ideally with line errors where the error occurs?*",
+    "CommandAuthor": "<@!284395792800677889>",
+    "CommandCreatedDate": "2018-10-28T17:52:39.0459423-04:00",
+    "CommandCount": 54
   },
   {
     "CommandName": "vasiley",
     "CommandData": "Have a Walk Around https://github.com/Vasiley",
     "CommandAuthor": "<@!284395792800677889>",
-    "CommandCreatedDate": "2018-10-17T09:35:18.7452436-04:00",
-    "CommandCount": 60
+    "CommandCreatedDate": "2018-10-29T10:17:08.6038263-04:00",
+    "CommandCount": 64
   },
   {
-    "CommandName": "breaking_changes",
-    "CommandData": "For a history of breaking changes, for those of you updating from really old versions, see  <https://gitlab.com/ludeeus/toolbox/blob/master/change_log/breaking_changes_home_assistant_history.md>",
-    "CommandAuthor": "<@!194499346027249664>",
-    "CommandCreatedDate": "2018-10-18T08:42:04.1742851-04:00",
-    "CommandCount": 7
-  },
-  {
-    "CommandName": "yaml",
-    "CommandData": "YAML is the mark up language used by Home Assistant. Consistent indenting (two spaces per level) is key - read more at <https://home-assistant.io/docs/configuration/yaml/>",
+    "CommandName": "backup",
+    "CommandData": "Be sure to regularly, automatically, back up your Home Assistant install. There are various critical files and configuration options (like the Z-Wave network key), plus all your time. Hass.io has snapshots, and for unix type installs see <https://blog.ceard.tech/2017/10/backing-up-home-assistant.html>.  Oh, and most important of all **test your ability to restore regularly**.",
     "CommandAuthor": "<@!331436841817604097>",
-    "CommandCreatedDate": "2018-10-18T14:08:16.1667218-04:00",
-    "CommandCount": 88
+    "CommandCreatedDate": "2018-10-30T12:21:38.3042782-04:00",
+    "CommandCount": 59
   },
   {
-    "CommandName": "edit",
-    "CommandData": "Instead of sending the message again, please edit the original message. For more information on how to edit messages in Discord, please visit: <https://support.discordapp.com/hc/en-us/articles/207618817-How-do-I-edit-my-messages->",
+    "CommandName": "flowolf",
+    "CommandData": "Have a look at flowolf's config at <https://github.com/flowolf/homeassistant-config>",
     "CommandAuthor": "<@!284395792800677889>",
-    "CommandCreatedDate": "2018-10-20T06:05:11.0878709-04:00",
-    "CommandCount": 43
+    "CommandCreatedDate": "2018-10-31T09:20:25.862839-04:00",
+    "CommandCount": 5
   },
   {
-    "CommandName": "images",
-    "CommandData": "Please use imgur or other image sharing web sites, and share the link here.",
+    "CommandName": "fruitsalad",
+    "CommandData": "Fruit salad is something that is made of fruits, and it is yummy!",
     "CommandAuthor": "<@!331436841817604097>",
-    "CommandCreatedDate": "2018-10-20T06:23:01.1385607-04:00",
-    "CommandCount": 10
+    "CommandCreatedDate": "2018-11-02T14:12:13.6678247-04:00",
+    "CommandCount": 2
+  },
+  {
+    "CommandName": "nicolaz",
+    "CommandData": "My Git Hub Repo  https://github.com/klaasnicolaas/Smarthome-homeassistant-config",
+    "CommandAuthor": "<@!331199286811295745>",
+    "CommandCreatedDate": "2018-11-02T23:42:27.1344041-04:00",
+    "CommandCount": 5
+  },
+  {
+    "CommandName": "32bit",
+    "CommandData": "The 32bit image is recomended over 64bit because of addon compatibility, performance issues and none of these boards has +4GB of RAM, so you would not get any real advantage with it.",
+    "CommandAuthor": "<@!194499346027249664>",
+    "CommandCreatedDate": "2018-11-05T16:12:11.700347-05:00",
+    "CommandCount": 9
+  },
+  {
+    "CommandName": "sinker1345",
+    "CommandData": "Have a peek at my git maybe it can help https://github.com/sinker1345/Home-Assistant-Configuration",
+    "CommandAuthor": "<@!331199286811295745>",
+    "CommandCreatedDate": "2018-11-06T20:48:04.6289735-05:00",
+    "CommandCount": 12
+  },
+  {
+    "CommandName": "jinja",
+    "CommandData": "Jinja Template Designer Documentation: <http://jinja.pocoo.org/docs/dev/templates/>\nFor more examples and samples, visit <https://github.com/skalavala/smarthome/tree/master/jinja_helpers#jinja-code-for-ninjas>",
+    "CommandAuthor": "<@!331436841817604097>",
+    "CommandCreatedDate": "2018-11-08T09:00:14.8669561-05:00",
+    "CommandCount": 4
   },
   {
     "CommandName": "tinkerer",
     "CommandData": "You can find his GitHub at <https://github.com/DubhAd/Home-AssistantConfig/> and his blog at <https://ceard.tech/>",
     "CommandAuthor": "<@!284395792800677889>",
-    "CommandCreatedDate": "2018-10-22T09:23:35.29321-04:00",
-    "CommandCount": 81
+    "CommandCreatedDate": "2018-11-08T11:11:21.9526303-05:00",
+    "CommandCount": 91
+  },
+  {
+    "CommandName": "repos",
+    "CommandData": "You can find a number of people's GitHub repositories at <https://github.com/topics/home-assistant-config> - these are their working configurations, not simply documentation examples",
+    "CommandAuthor": "<@!284395792800677889>",
+    "CommandCreatedDate": "2018-11-09T18:24:40.8400966-05:00",
+    "CommandCount": 14
+  },
+  {
+    "CommandName": "skalavala",
+    "CommandData": "You can find skalavala's github repo at https://www.github.com/skalavala and his blog at <https://www.awesome-automations.com/blog/>",
+    "CommandAuthor": "<@!331436841817604097>",
+    "CommandCreatedDate": "2018-11-09T18:39:21.1807941-05:00",
+    "CommandCount": 3
+  },
+  {
+    "CommandName": "condition",
+    "CommandData": "Conditions can be used within a script or automation to prevent further execution. See <https://home-assistant.io/docs/scripts/conditions/> for details.",
+    "CommandAuthor": "<@!284395792800677889>",
+    "CommandCreatedDate": "2018-11-09T18:40:34.3689559-05:00",
+    "CommandCount": 2
   },
   {
     "CommandName": "rule6",
     "CommandData": "**Rule #6:** Spam will not be tolerated, including but not limited to: self-promotion, flooding, codewalls (longer than 15 lines) and unapproved bots.\n\n*Please take the time now to review all of the rules and references in <#331130181102206976>.*",
     "CommandAuthor": "<@!284395792800677889>",
-    "CommandCreatedDate": "2018-10-22T11:36:15.2737818-04:00",
-    "CommandCount": 31
+    "CommandCreatedDate": "2018-11-09T18:46:44.0461462-05:00",
+    "CommandCount": 37
+  },
+  {
+    "CommandName": "images",
+    "CommandData": "Please use imgur or other image sharing web sites, and share the link here.",
+    "CommandAuthor": "<@!331436841817604097>",
+    "CommandCreatedDate": "2018-11-09T22:16:03.3541028-05:00",
+    "CommandCount": 21
+  },
+  {
+    "CommandName": "RTFM",
+    "CommandData": "**RTFM** is a well known phrase, used when someone hasn't taken time to read the documentation. Please take time to Read The $%#@ Manual - author unknown.",
+    "CommandAuthor": "<@!194499346027249664>",
+    "CommandCreatedDate": "2018-11-10T06:26:26.259253-05:00",
+    "CommandCount": 5
+  },
+  {
+    "CommandName": "yaml",
+    "CommandData": "YAML is the mark up language used by Home Assistant. Consistent indenting (two spaces per level) is key - read more at <https://home-assistant.io/docs/configuration/yaml/>",
+    "CommandAuthor": "<@!331436841817604097>",
+    "CommandCreatedDate": "2018-11-10T07:41:51.7678896-05:00",
+    "CommandCount": 96
+  },
+  {
+    "CommandName": "zwave_stick_alias",
+    "CommandData": "```shell\n$ sudo su && echo 'SUBSYSTEM==\\\"tty\\\", ATTRS{idVendor}==\\\"0658\\\", ATTRS{idProduct}==\\\"0200\\\", SYMLINK+=\\\"zwave\\\"' > /etc/udev/rules.d/99-usb-serial.rules && reboot now\n```",
+    "CommandAuthor": "<@!284395792800677889>",
+    "CommandCreatedDate": "2018-11-10T11:19:11.6431794-05:00",
+    "CommandCount": 4
+  },
+  {
+    "CommandName": "edit",
+    "CommandData": "Instead of sending the message again, please edit the original message. For more information on how to edit messages in Discord, please visit: <https://support.discordapp.com/hc/en-us/articles/207618817-How-do-I-edit-my-messages->",
+    "CommandAuthor": "<@!284395792800677889>",
+    "CommandCreatedDate": "2018-11-11T00:20:06.6669938-05:00",
+    "CommandCount": 46
+  },
+  {
+    "CommandName": "packages",
+    "CommandData": "To enable packages, add `packages: !include_dir_named packages` to your `configuration.yaml` so that it looks similar to this:\n```yaml\nhomeassistant:\n  name: Home\n  latitude: !secret home_latitude\n  ...\n  packages: !include_dir_named packages\n```\n***Important:** The `packages:` line **must** be nested under `homeassistant:`!*\n\nFor more information on packages, please refer to the packages docs: <https://home-assistant.io/docs/configuration/packages/>",
+    "CommandAuthor": "<@!284395792800677889>",
+    "CommandCreatedDate": "2018-11-11T01:20:56.090813-05:00",
+    "CommandCount": 28
   }
 ]

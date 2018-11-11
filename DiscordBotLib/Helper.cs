@@ -12,6 +12,7 @@ using Discord.WebSocket;
 using Discord.Commands;
 using System.Collections.Generic;
 using System.Text;
+using System.Xml;
 
 namespace DiscordBotLib
 {
@@ -265,6 +266,60 @@ namespace DiscordBotLib
                     }
                 );
             }
+        }
+
+        public static string LookupString(string searchString)
+        {
+            string[] searchWords = null;
+            StringBuilder sb = new StringBuilder();
+            XmlDocument doc = Sitemap.SiteMapXmlDocument;
+
+            searchString = searchString.Replace('.', ' ').Replace('_', ' ').Replace('-', ' ').ToLower();
+            if (searchString.Contains(" "))
+                searchWords = searchString.Split(' ');
+            else
+                searchWords = new string[] { searchString };
+
+            if (null == searchWords)
+                return string.Empty;
+
+            Array.Sort(searchWords);
+
+            foreach (XmlNode item in doc.DocumentElement.ChildNodes)
+            {
+                string location = string.Empty;
+                string[] sitemapWords = null;
+
+                string loc = item.FirstChild.InnerText;
+                if (loc.EndsWith("/"))
+                {
+                    int index = loc.LastIndexOf("/", (loc.Length - 2));
+                    location = loc.Substring((index) + 1, ((loc.Length - index) - 2));
+                }
+                else
+                {
+                    int index = loc.LastIndexOf("/", loc.Length);
+                    location = loc.Substring((index) + 1, ((loc.Length - index) - 1));
+                }
+
+                location = location.Replace('.', ' ').Replace('_', ' ').Replace('-', ' ').ToLower();
+                if (location.Contains(" "))
+                    sitemapWords = location.Split(' ');
+                else
+                    sitemapWords = new string[] { location };
+
+                if (null == sitemapWords)
+                    continue;
+
+                Array.Sort(sitemapWords);
+                if (string.Join("", searchWords) == string.Join("", sitemapWords))
+                {
+                    sb.Append(item.FirstChild.InnerText);
+                    sb.Append("\n");
+                }
+            }
+
+            return sb.ToString();
         }
     }
 }

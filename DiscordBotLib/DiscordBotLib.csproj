@@ -137,6 +137,7 @@
     <Compile Include="AsModule.cs" />
     <Compile Include="Base64Module.cs" />
     <Compile Include="BaseModule.cs" />
+    <Compile Include="BreakingChanges.cs" />
     <Compile Include="CodeShareModule.cs" />
     <Compile Include="CommandModule.cs" />
     <Compile Include="Constants.cs" />

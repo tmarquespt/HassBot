@@ -24,6 +24,8 @@ namespace DiscordBotLib
                 "~as @user #channel <your message>";
         public static readonly string USAGE_BASE64 =
                 "~base64_encode <string to encode> or ~base64_decode <string to decode>";
+        public static readonly string USAGE_BREAKINGCHANGES =
+                "Example: `~breaking_changes 82` gives you breaking changes for release 82.0 and it's minor releases";
         public static readonly string USAGE_COMMAND =
                 "~command <name> <description>";
         public static readonly string USAGE_C2F =
