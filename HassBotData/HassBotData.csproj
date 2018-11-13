@@ -50,6 +50,7 @@
     <Compile Include="AFKManager.cs" />
     <Compile Include="CommandManager.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="HassBotCommands.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="Persistence.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

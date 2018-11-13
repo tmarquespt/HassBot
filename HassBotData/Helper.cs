@@ -17,24 +17,21 @@ namespace HassBotData
         private static readonly log4net.ILog logger =
             log4net.LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
-        public static void DownloadSiteMap()
+        public static void DownloadFile(string targetUrl, string localFilePath)
         {
             try
             {
-                string sitemapUrl = AppSettingsUtil.AppSettingsString("sitemapUrl", true, string.Empty);
-                string sitemapPath = AppSettingsUtil.AppSettingsString("sitemapPath", true, string.Empty);
-
                 // The Home Assistant web site has stopped support for TLS 1.0 - which is used bydefault.
                 // Let's force it to use TLS 1.2 - otherwise it will throw the following error:
                 // The underlying connection was closed: An unexpected error occurred on a send.
                 System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
                 WebClient wc = new WebClient();
 
-                wc.DownloadFile(new Uri(sitemapUrl), sitemapPath);
+                wc.DownloadFile(new Uri(targetUrl), localFilePath);
             }
             catch (Exception e)
             {
-                logger.Error(Constants.ERR_DOWNLOADING_SITEMAP, e);
+                logger.Error(string.Format(Constants.ERR_DOWNLOADING_FILE, targetUrl), e);
             }
         }
 
@@ -52,7 +49,7 @@ namespace HassBotData
             }
             catch (Exception e)
             {
-                logger.Error(Constants.ERR_DOWNLOADING_SITEMAP, e);
+                logger.Error(string.Format(Constants.ERR_DOWNLOADING_FILE, url), e);
             }
             return string.Empty;
         }

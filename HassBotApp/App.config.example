@@ -54,8 +54,9 @@
     <add key="maxLinesLimit" value="15" />
     <add key="token" value="abcdefghijklmnopqrstuvwxyz.abcdef.abcdefghijklmnopqrstuvwxyz" />
     <add key="sitemapUrl" value="https://home-assistant.io/sitemap.xml" />
+    <add key="hassbotCommandUrl" value="https://raw.githubusercontent.com/awesome-automations/hassbot-data/master/commands.json" />
+    <add key="hassbotCommandPath" value="C:\kalavala\HassBot\Output\commands.json" />
     <add key="sitemapPath" value="C:\home-assistant\sitemap.xml" />
-    <add key="commandsFile" value="C:\home-assistant\commands.json" />
     <add key="afkUsersFile" value="C:\home-assistant\away.json" />
     <add key="deleteHoundBotMsgs" value="true" />
     <add key="serverGuild" value="330944238910963714" />

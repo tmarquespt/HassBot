@@ -14,7 +14,7 @@ namespace HassBotData
                 "Failed to load commands.json file";
         public static readonly string ERR_SUBSCRIPTION_FILE =
                 "Failed to load subscriptions.json file";
-        public static readonly string ERR_DOWNLOADING_SITEMAP =
-                "Error downloading Home Assistant sitemap file.";
+        public static readonly string ERR_DOWNLOADING_FILE =
+                "Error downloading {0} file.";
     }
 }

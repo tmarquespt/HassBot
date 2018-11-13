@@ -27,7 +27,7 @@ namespace DiscordBotLib
         public static readonly string USAGE_BREAKINGCHANGES =
                 "Example: `~breaking_changes 82` gives you breaking changes for release 82.0 and it's minor releases";
         public static readonly string USAGE_COMMAND =
-                "~command <name> <description>";
+                "`~command add` or `~command refresh` to refresh commands";
         public static readonly string USAGE_C2F =
                 "c2f <numeric value of temperature in celsius>";
         public static readonly string USAGE_F2C =

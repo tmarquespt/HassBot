@@ -208,12 +208,10 @@ namespace DiscordBotLib
 
         private static async Task HandleCustomCommand(string command, SocketUserMessage message, string mentionedUsers, IResult result)
         {
-            CommandDTO cmd = CommandManager.TheCommandManager.GetCommandByName(command);
-            if (cmd != null && cmd.CommandData != string.Empty)
+            string response = HassBotCommands.Instance.Lookup(command);
+            if (string.Empty != response)
             {
-                cmd.CommandCount += 1;
-                CommandManager.TheCommandManager.UpdateCommand(cmd);
-                await message.Channel.SendMessageAsync(mentionedUsers + cmd.CommandData);
+                await message.Channel.SendMessageAsync(mentionedUsers + response);
             }
             else
             {
