@@ -37,6 +37,7 @@ namespace HassBotData
             string json = JsonConvert.SerializeObject(afkUsers, Formatting.Indented);
             File.WriteAllText(filePath, json);
         }
+
         public static List<SubscribeDTO> LoadSubscriptions(string filePath)
         {
             if (!File.Exists(filePath)) return null;
@@ -47,6 +48,19 @@ namespace HassBotData
         public static void SaveSubscriptions(List<SubscribeDTO> subscriptions, string filePath)
         {
             string json = JsonConvert.SerializeObject(subscriptions, Formatting.Indented);
+            File.WriteAllText(filePath, json);
+        }
+
+        public static List<ViolatorDTO> LoadViolations(string filePath)
+        {
+            if (!File.Exists(filePath)) return null;
+            string json = File.ReadAllText(filePath);
+            return JsonConvert.DeserializeObject<List<ViolatorDTO>>(json);
+        }
+
+        public static void SaveViolations(List<ViolatorDTO> violations, string filePath)
+        {
+            string json = JsonConvert.SerializeObject(violations, Formatting.Indented);
             File.WriteAllText(filePath, json);
         }
 

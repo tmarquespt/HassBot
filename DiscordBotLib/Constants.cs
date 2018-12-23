@@ -25,21 +25,23 @@ namespace DiscordBotLib
         public static readonly string USAGE_BASE64 =
                 "~base64_encode <string to encode> or ~base64_decode <string to decode>";
         public static readonly string USAGE_BREAKINGCHANGES =
-                "Example: `~breaking_changes 82` gives you breaking changes for release 82.0 and it's minor releases";
+                "`~breaking_changes 82` gives you breaking changes for release 82.0 and it's minor releases";
         public static readonly string USAGE_COMMAND =
                 "`~command add` or `~command refresh` to refresh commands";
         public static readonly string USAGE_C2F =
-                "c2f <numeric value of temperature in celsius>";
+                "~c2f <numeric value of temperature in celsius>";
         public static readonly string USAGE_F2C =
-                "f2c <numeric value of temperature in fahrenheit>";
+                "~f2c <numeric value of temperature in fahrenheit>";
+        public static readonly string USAGE_VIOLATION =
+                "`~violation pardon @username` to pardon a user's violations.";
         public static readonly string USAGE_HEX2DEC =
-                "hex2dec <decimal value>";
+                "~hex2dec <decimal value>";
         public static readonly string USAGE_DEC2HEX =
-                "dec2hex <hex value>";
+                "~dec2hex <hex value>";
         public static readonly string USAGE_BIN2DEC =
-                "bin2dec <binary value>";
+                "~bin2dec <binary value>";
         public static readonly string USAGE_DEC2BIN =
-                "dec2bin <decimal value>";
+                "~dec2bin <decimal value>";
         public static readonly string USAGE_LOOKUP =
                 "~lookup <keyword> <@ optional user>";
         public static readonly string USAGE_DEEPSEARCH =

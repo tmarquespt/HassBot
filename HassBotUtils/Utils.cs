@@ -33,7 +33,7 @@ namespace HassBotUtils
             return adjectives[index];
         }
 
-        public static bool LineCountCheck(string message)
+        public static bool LineCountCheckPassed(string message)
         {
             if (string.Empty == message)
                 return true;

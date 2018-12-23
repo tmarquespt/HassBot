@@ -1,0 +1,20 @@
+[
+  {
+    "ViolatorId": 331436841817604097,
+    "ViolatorName": "skalavala",
+    "Violations": [
+      {
+        "ViolationDescription": "Codewall",
+        "ViolationDateTime": "2018-12-22T16:12:21.1009783-05:00",
+        "ViolationChannel": "@skalavala#0375",
+        "ViolationExtraData": null
+      },
+      {
+        "ViolationDescription": "Codewall",
+        "ViolationDateTime": "2018-12-22T16:15:09.6579017-05:00",
+        "ViolationChannel": "@skalavala#0375",
+        "ViolationExtraData": null
+      }
+    ]
+  }
+]

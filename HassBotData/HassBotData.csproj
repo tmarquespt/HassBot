@@ -56,6 +56,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sitemap.cs" />
     <Compile Include="SubscriptionManager.cs" />
+    <Compile Include="ViolationsManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HassBotDTO\HassBotDTOs.csproj">

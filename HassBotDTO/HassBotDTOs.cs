@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace HassBotDTOs
 {
@@ -86,5 +87,51 @@ namespace HassBotDTOs
     {
         public string Stable { get; set; }
         public string Beta { get; set; }
+    }
+
+    public enum CommonViolationTypes
+    {
+        Codewall,
+        Troll,
+        Spam,
+        Custom
+    }
+
+    public class Violation
+    {
+        [JsonProperty(PropertyName = "Description")]
+        public string ViolationDescription { get; set; }
+
+        [JsonProperty(PropertyName = "Date")]
+        public DateTime ViolationDateTime { get; set; }
+
+        [JsonProperty(PropertyName = "Channel")]
+        public string ViolationChannel { get; set; }
+
+        [JsonProperty(PropertyName = "ExtraData")]
+        public string ViolationExtraData { get; set; }
+    }
+
+    public class ViolatorDTO
+    {
+        private List<Violation> _violations = new List<Violation>(10);
+
+        [JsonProperty(PropertyName = "ID")]
+        public ulong ViolatorId { get; set; }
+
+        [JsonProperty(PropertyName = "User")]
+        public string ViolatorName { get; set; }
+
+        [JsonProperty(PropertyName = "Violations")]
+        public List<Violation> Violations {
+            get
+            {
+                return _violations;
+            }
+            set
+            {
+                _violations = value;
+            }
+        }
     }
 }

@@ -17,23 +17,6 @@
     ]
   },
   {
-    "Id": 194499346027249664,
-    "User": "Ludeeus",
-    "Tags": [
-      "cloudflare",
-      "uptime_robot",
-      "tautullii",
-      "tautulli",
-      "sensor.version",
-      "custom_updater",
-      "ludeeus",
-      "googlehome",
-      "traccar",
-      "ruter",
-      "launch_library"
-    ]
-  },
-  {
     "Id": 331436841817604097,
     "User": "skalavala",
     "Tags": [
@@ -49,7 +32,8 @@
     "Id": 210573875925221377,
     "User": "hunterjm",
     "Tags": [
-      "image_processing"
+      "image_processing",
+      "tensorflow"
     ]
   },
   {
@@ -63,7 +47,27 @@
       "openuv",
       "tile",
       "17track",
-      "flu"
+      "flu",
+      "seventeentrack"
+    ]
+  },
+  {
+    "Id": 194499346027249664,
+    "User": "Ludeeus",
+    "Tags": [
+      "cloudflare",
+      "uptime_robot",
+      "tautullii",
+      "tautulli",
+      "sensor.version",
+      "custom_updater",
+      "googlehome",
+      "traccar",
+      "ruter",
+      "launch_library",
+      "hadockermon",
+      "ghlocalapi",
+      "googledevices"
     ]
   }
 ]

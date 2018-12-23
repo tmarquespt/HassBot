@@ -157,6 +157,7 @@
     <Compile Include="SubscriptionsModule.cs" />
     <Compile Include="UpdateModule.cs" />
     <Compile Include="VersionModule.cs" />
+    <Compile Include="ViolationModule.cs" />
     <Compile Include="WelcomeModule.cs" />
     <Compile Include="YamlModule.cs" />
   </ItemGroup>

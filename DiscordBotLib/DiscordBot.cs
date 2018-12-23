@@ -29,7 +29,7 @@ namespace DiscordBotLib
               Please read rule #6 here <#331130181102206976>";
 
         private static readonly string HASTEBIN_MESSAGE =
-            "{0} being {1}, posted a message that is more than 15 lines. It is now available at: {2}";
+            "PLEASE READ THE RULES, {0}! You posted a message/code that is more than 15 lines. It is moved to: {1}";
 
         private static readonly log4net.ILog logger =
              log4net.LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
@@ -175,18 +175,18 @@ namespace DiscordBotLib
 
         private static async Task HandleLineCount(SocketUserMessage message, SocketCommandContext context)
         {
+            if (Utils.LineCountCheckPassed(message.Content))
+                return;
 
-            if (!Utils.LineCountCheck(message.Content))
+            if (!IsMod(context.User.Username))
             {
                 string url = await HassBotUtils.Utils.Paste2Ubuntu(message.Content, context.User.Username);
                 if (url == string.Empty)
                 {
-
                     // untutu paste failed... try hastebin
                     url = HassBotUtils.Utils.Paste2HasteBin(message.Content);
                     if (url == string.Empty)
                     {
-
                         // hastebin paste ALSO failed... just warn the user, and drop a poop emoji :)
                         var poopEmoji = new Emoji(POOP);
                         string msxLimitMsg = AppSettingsUtil.AppSettingsString("maxLineLimitMessage", false, MAX_LINE_LIMIT);
@@ -197,13 +197,104 @@ namespace DiscordBotLib
                 }
 
                 // publish the URL link
-                string adjective = HassBotUtils.Utils.GetFlippinAdjective();
-                string response = string.Format(HASTEBIN_MESSAGE, context.User.Mention, adjective, url);
+                string response = string.Format(HASTEBIN_MESSAGE, context.User.Mention, url);
                 await message.Channel.SendMessageAsync(response);
+
+                // Violation Management
+                ViolationsManager.TheViolationsManager.AddIncident(context.User.Id, context.User.Username, CommonViolationTypes.Codewall.ToString(), context.Channel.Name);
+                List<Violation> violations = ViolationsManager.TheViolationsManager.GetIncidentsByUser(context.User.Id);
+                if (null != violations)
+                {
+                    if (violations.Count >= 3 && violations.Count <= 5 )
+                    {
+                        await KickWarningMessage(context);
+                    }
+                    else if (violations.Count > 5)
+                    {
+                        await KickMessage(message, context);
+                    }
+                }
 
                 // and, delete the original message!
                 await context.Message.DeleteAsync();
             }
+        }
+
+        private static async Task KickWarningMessage(SocketCommandContext context)
+        {
+            var dmChannel = await context.User.GetOrCreateDMChannelAsync();
+            StringBuilder sb = new StringBuilder();
+            sb.Append("Hello there!");
+            sb.Append("\n");
+            sb.Append("You are on the verge of getting kicked out of the server for not following the rules.");
+            sb.Append("\n");
+            sb.Append("You have repeatedly violated the rules that we all take very seriously. Please pay attention to the rules!");
+            sb.Append("\n");
+            sb.Append("Please reach out to any of the mods to get you off of the naughtly list. If these violations continue, you will be kicked out of the server.");
+            sb.Append("\n");
+            sb.Append("Thank you!");
+
+            await dmChannel.SendMessageAsync(sb.ToString());
+
+            // send a message to #botspam channel as well
+            ulong modlogChannelId = (ulong)AppSettingsUtil.AppSettingsLong("modlogChannel", true, 473590680103419943);
+            var modlogChannel = context.Client.GetChannel(modlogChannelId) as ITextChannel;
+            await modlogChannel.SendMessageAsync("User " + context.User.Mention  + " was given a warning for violating rules for 3 consecutive times!", false, null);
+        }
+
+        private static async Task KickMessage(SocketUserMessage message, SocketCommandContext context)
+        {
+            // Send a Direct Message to the User
+            var dmChannel = await context.User.GetOrCreateDMChannelAsync();
+            StringBuilder sb = new StringBuilder();
+
+            sb.Append("Hello, there!");
+            sb.Append("\n\n");
+            sb.Append("We got a bit of a problem here. We have some ground rules that we **really** like you to follow.");
+            sb.Append("\n");
+            sb.Append("Please make sure you pay **extra** attention to the welcome notes and read descriptions of each channel carefully.");
+            sb.Append("\n\n");
+            sb.Append("You got kicked out of the Discord server for posting code that is more than 15 lines **FOR MORE THAN 5 TIMES**. This is not good!");
+            sb.Append("\n\n");
+            sb.Append("We would love to work with you to help you provide the support you need. For that, we all have to follow the rules and keep it civil.");
+            sb.Append("\n");
+            sb.Append("Once you had the chance to read and understood the rules, you can simply log back and meet with the awesome community.");
+            sb.Append("\n");
+            sb.Append("To join the server, click on the link again");
+            sb.Append("\n");
+            sb.Append("https://discord.gg/c5DvZ4e");
+            sb.Append("\n\n");
+            sb.Append("Thank you, and hope to see you again!");
+
+            await dmChannel.SendMessageAsync(sb.ToString());
+
+            // kick the user
+            await ((SocketGuildUser)message.Author).KickAsync("Posted code walls for more than 5 times.", null);
+            await message.Channel.SendMessageAsync("User " + context.User.Mention + " got kicked out because of posting too many codewalls!");
+
+            // send a message to #botspam channel as well
+            ulong modlogChannelId = (ulong)AppSettingsUtil.AppSettingsLong("modlogChannel", true, 473590680103419943);
+            var modlogChannel = context.Client.GetChannel(modlogChannelId) as ITextChannel;
+            await modlogChannel.SendMessageAsync("User " + context.User.Mention + " got kicked out for violating rules for more than 5 times!", false, null);
+
+            // finally clear the violations, so that the user can start fresh
+            ViolationsManager.TheViolationsManager.ClearViolationsForUser(context.User.Id);
+        }
+
+        private static bool IsMod(string user)
+        {
+            // get the list of mods from config file
+            string mods = AppSettingsUtil.AppSettingsString("mods",
+                                                             true,
+                                                             string.Empty);
+            string[] moderators = mods.Split(',');
+            var results = Array.FindAll(moderators,
+                                        s => s.Trim().Equals(user,
+                                        StringComparison.OrdinalIgnoreCase));
+            if (results.Length == 1)
+                return true;
+            else
+                return false;
         }
 
         private static async Task HandleCustomCommand(string command, SocketUserMessage message, string mentionedUsers, IResult result)

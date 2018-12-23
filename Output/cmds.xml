@@ -14,6 +14,13 @@
     "CommandCount": 2
   },
   {
+    "CommandName": "xy",
+    "CommandData": "The XY problem is asking about your attempted solution rather than your actual problem. This leads to enormous amounts of wasted time and energy, both on the part of people asking for help, and on the part of those providing help.\nThe problem occurs when people get stuck on what they believe is the solution and are unable to step back and explain the issue in full.\n<https://en.wikipedia.org/wiki/XY_problem>",
+    "CommandAuthor": "<@!194499346027249664>",
+    "CommandCreatedDate": "2018-02-09T13:53:50.2879196-05:00",
+    "CommandCount": 0
+  },
+  {
     "CommandName": "aiohttp",
     "CommandData": "```shell\n$ sudo su -s /bin/bash homeassistant\n$ cd /home/homeassistant/.homeassistant/deps\n$ rm -rf aiohttp*\n$ pip3 install --upgrade aiohttp==1.3.3 -t .\n```",
     "CommandAuthor": "<@!284395792800677889>",
@@ -1090,5 +1097,33 @@
     "CommandAuthor": "<@!331436841817604097>",
     "CommandCreatedDate": "2018-11-12T16:00:12.6368625-05:00",
     "CommandCount": 22
+  },
+  {
+    "CommandName": "tracker-owntracks",
+    "CommandData": "Remove all reference to the `owntracks` device tracker and set up the integration as explained in <https://www.home-assistant.io/components/owntracks/>",
+    "CommandAuthor": "<@!284395792800677889>",
+    "CommandCreatedDate": "2018-12-01T20:06:00.1234567-00:00",
+    "CommandCount": 0
+  },
+  {
+    "CommandName": "issues",
+    "CommandData": "Want to see what issues are open (or were open and are now closed)?\n\nCheck <https://github.com/home-assistant/home-assistant/issues> for the backend, <https://github.com/home-assistant/home-assistant-polymer/issues> for the UI, and <https://github.com/home-assistant/home-assistant.github.io/issues> for the documentation.",
+    "CommandAuthor": "<@!284395792800677889>",
+    "CommandCreatedDate": "2018-12-10T16:06:00.1234567-00:00",
+    "CommandCount": 0
+  },
+  {
+    "CommandName": "llat",
+    "CommandData": "The LLAT, or Long Lived Access Token can be found in your user profile (see <https://www.home-assistant.io/docs/authentication/#your-account-profile>). For examples of using it for the API see the API docs at <https://developers.home-assistant.io/docs/en/external_api_rest.html>",
+    "CommandAuthor": "<@!284395792800677889>",
+    "CommandCreatedDate": "2018-12-11T20:36:00.1234567-00:00",
+    "CommandCount": 0
+  },
+  {
+    "CommandName": "vef",
+    "CommandData": "Help us help you. To quickly explain your environment please specify V/E/F\n\n- Version - Which version of Home Assistant are you running?\n  Example: 0.84.3, 0.82.0, 0.85.beta.1\n- Enviroment - How are you running Home Assistant?\n  Example: venv, venv-WSL, docker, hassio, native\n- Frontend: - Which kind of frontend configuration are you using?\n  Example: auto, manual, yaml, legacy (not lovelace)\n\nExamples: 0.84.3/venv/yaml",
+    "CommandAuthor": "<@!284395792800677889>",
+    "CommandCreatedDate": "2018-12-17T19:54:00.1234567-00:00",
+    "CommandCount": 0
   }
 ]
