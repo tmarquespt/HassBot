@@ -29,7 +29,7 @@ namespace DiscordBotLib
               Please read rule #6 here <#331130181102206976>";
 
         private static readonly string HASTEBIN_MESSAGE =
-            "PLEASE FOLLOW THE RULES, {0}! You have {1} warning(s) left. You posted a message/code that is more than 15 lines. It is moved here --> {1}";
+            "Please follow the rules, {0}! You have {1} warning(s) left. You posted a message/code that is more than 15 lines. It is moved here --> {2}";
 
         private static readonly log4net.ILog logger =
              log4net.LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
