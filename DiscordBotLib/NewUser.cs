@@ -45,10 +45,9 @@ namespace DiscordBotLib
             sb.Append("We hope you enjoy the company of many talented individuals here!\n\n");
 
             sb.Append("A few more **important things** to remember:\n\n");
-            sb.Append("1. A maximum of 10-15 lines of code can be posted. For code that is more than 15 lines, please use https://www.hastebin.com\n");
+            sb.Append("1. A maximum of 10-15 lines of code can be posted. For code that is more than 15 lines, please use https://paste.ubuntu.com\n");
             sb.Append("2. Please make sure you format the code when pasting. Use markdown language when pasting code.\n");
-            sb.Append(string.Format("3. For help, please go to {0} channel and type `~format` or `~share` commands.\n\n", botspamChannel));
-            sb.Append("4. To get access to the #github, #status #reddit and #botspam channels, run `?rank other` command from the #lounge channel.\n\n");
+            sb.Append("3. To get access to the #github, #status #reddit and #botspam channels, run `?rank other` command from the #lounge channel.\n\n");
 
             sb.Append(string.Format("Once again, Welcome to the {0} Channel!\n\n", user.Guild.Name));
         }

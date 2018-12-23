@@ -32,32 +32,57 @@ namespace DiscordBotLib
             if (!await VerifyMod(Context))
                 return;
 
-            string mentionedUsers = base.MentionedUsers();
-            string[] users = mentionedUsers.Split(' ');
-            foreach ( string usr in users)
+            string mentionedUsers = base.MentionedUsers().Trim();
+            string command = cmd.Split(' ')[0];
+            if (command.ToLower() == "pardon")
             {
-                var charsToRemove = new string[] { "@", "!", "<", ">" };
-                string u = usr.Trim();
-                if (string.Empty == u)
-                    continue;
-                else
+                
+                string[] users = mentionedUsers.Split(' ');
+                foreach (string usr in users)
                 {
-                    foreach (var c in charsToRemove)
+                    string u = usr.Trim();
+                    if (string.Empty == u)
+                        continue;
+                    else
+                        u = u.Trim(new char[] { '@', '!', '<', '>' });
+
+
+                    bool result = ViolationsManager.TheViolationsManager.ClearViolationsForUser(ulong.Parse(u));
+                    if (result)
                     {
-                        u = u.Replace(c, string.Empty);
+                        await ReplyAsync("The user " + usr + " has been taken out of the naughty list!", false, null);
+                    }
+                    else
+                    {
+                        await ReplyAsync("The user " + usr + " is not in the naughty list!", false, null);
                     }
                 }
-
-                bool result = ViolationsManager.TheViolationsManager.ClearViolationsForUser(ulong.Parse(u));
-                if (result)
-                {
-                    await ReplyAsync("The user " + usr + " has been taken out of the naughty list!", false, null);
-                }
-                else
-                {
-                    await ReplyAsync("The user " + usr + " is not in the naughty list!", false, null);
-                }
             }
+            //else if (command.ToLower() == "add")
+            //{
+            //    if (mentionedUsers == string.Empty)
+            //    {
+            //        await base.DisplayUsage(Constants.USAGE_VIOLATION);
+            //        return;
+            //    }
+            //    else
+            //    {
+            //        string tmp = mentionedUsers.Replace("@!", "@");
+            //        string message  = cmd.Replace(tmp, string.Empty);
+            //        message = message.Replace("add", string.Empty);
+            //        message = message.Trim();
+            //        if (message == string.Empty)
+            //        {
+            //            await base.DisplayUsage(Constants.USAGE_VIOLATION);
+            //            return;
+            //        }
+            //        else
+            //        {
+            //            ViolationsManager.TheViolationsManager.AddIncident(Context.User.Id, Context.User.Username, message, Context.Channel.Name);
+            //            await ReplyAsync(":ticket: A violation has been successfully issued to " + mentionedUsers + ", with a message: `" + message + "`", false, null);
+            //        }
+            //    }
+            //}
         }
     }
 }

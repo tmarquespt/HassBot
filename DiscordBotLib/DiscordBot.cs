@@ -29,7 +29,7 @@ namespace DiscordBotLib
               Please read rule #6 here <#331130181102206976>";
 
         private static readonly string HASTEBIN_MESSAGE =
-            "PLEASE READ THE RULES, {0}! You posted a message/code that is more than 15 lines. It is moved to: {1}";
+            "PLEASE FOLLOW THE RULES, {0}! You have {1} warning(s) left. You posted a message/code that is more than 15 lines. It is moved here --> {1}";
 
         private static readonly log4net.ILog logger =
              log4net.LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
@@ -196,13 +196,17 @@ namespace DiscordBotLib
                     }
                 }
 
+                List<Violation> violations = ViolationsManager.TheViolationsManager.GetIncidentsByUser(context.User.Id);
+                int totalViolations = 0;
+                if (null != violations)
+                    totalViolations = violations.Count;
+
                 // publish the URL link
-                string response = string.Format(HASTEBIN_MESSAGE, context.User.Mention, url);
+                string response = string.Format(HASTEBIN_MESSAGE, context.User.Mention, (5 - totalViolations).ToString(), url);
                 await message.Channel.SendMessageAsync(response);
 
                 // Violation Management
-                ViolationsManager.TheViolationsManager.AddIncident(context.User.Id, context.User.Username, CommonViolationTypes.Codewall.ToString(), context.Channel.Name);
-                List<Violation> violations = ViolationsManager.TheViolationsManager.GetIncidentsByUser(context.User.Id);
+                ViolationsManager.TheViolationsManager.AddIncident(context.User.Id, context.User.Username, CommonViolationTypes.Codewall.ToString(), context.Channel.Name);                
                 if (null != violations)
                 {
                     if (violations.Count >= 3 && violations.Count <= 5 )
@@ -224,15 +228,15 @@ namespace DiscordBotLib
         {
             var dmChannel = await context.User.GetOrCreateDMChannelAsync();
             StringBuilder sb = new StringBuilder();
-            sb.Append("Hello there!");
+            sb.Append("\n\nHello there!");
             sb.Append("\n");
-            sb.Append("You are on the verge of getting kicked out of the server for not following the rules.");
+            sb.Append("You are on the verge of getting kicked out of the server for not following the rules. You've been issued 3 warnings already, and you only have 2 left.");
             sb.Append("\n");
             sb.Append("You have repeatedly violated the rules that we all take very seriously. Please pay attention to the rules!");
             sb.Append("\n");
             sb.Append("Please reach out to any of the mods to get you off of the naughtly list. If these violations continue, you will be kicked out of the server.");
             sb.Append("\n");
-            sb.Append("Thank you!");
+            sb.Append("Thank you!\n");
 
             await dmChannel.SendMessageAsync(sb.ToString());
 
@@ -248,7 +252,7 @@ namespace DiscordBotLib
             var dmChannel = await context.User.GetOrCreateDMChannelAsync();
             StringBuilder sb = new StringBuilder();
 
-            sb.Append("Hello, there!");
+            sb.Append("\n\nHello, there!");
             sb.Append("\n\n");
             sb.Append("We got a bit of a problem here. We have some ground rules that we **really** like you to follow.");
             sb.Append("\n");
@@ -264,7 +268,7 @@ namespace DiscordBotLib
             sb.Append("\n");
             sb.Append("https://discord.gg/c5DvZ4e");
             sb.Append("\n\n");
-            sb.Append("Thank you, and hope to see you again!");
+            sb.Append("Thank you, and hope to see you again!\n");
 
             await dmChannel.SendMessageAsync(sb.ToString());
 

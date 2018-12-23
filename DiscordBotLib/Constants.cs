@@ -19,39 +19,39 @@ namespace DiscordBotLib
         public static readonly string USAGE_SEEN =
                 "`~seen <username>`";
         public static readonly string USAGE_EIGHTBALL =
-                "~8ball <your question>";
+                "`~8ball <your question>`";
         public static readonly string USAGE_AS =
-                "~as @user #channel <your message>";
+                "`~as @user #channel <your message>`";
         public static readonly string USAGE_BASE64 =
-                "~base64_encode <string to encode> or ~base64_decode <string to decode>";
+                "`~base64_encode <string to encode>` or `~base64_decode <string to decode>`";
         public static readonly string USAGE_BREAKINGCHANGES =
                 "`~breaking_changes 82` gives you breaking changes for release 82.0 and it's minor releases";
         public static readonly string USAGE_COMMAND =
                 "`~command add` or `~command refresh` to refresh commands";
         public static readonly string USAGE_C2F =
-                "~c2f <numeric value of temperature in celsius>";
+                "`~c2f <numeric value of temperature in celsius>`";
         public static readonly string USAGE_F2C =
-                "~f2c <numeric value of temperature in fahrenheit>";
+                "`~f2c <numeric value of temperature in fahrenheit>`";
         public static readonly string USAGE_VIOLATION =
-                "`~violation pardon @username` to pardon a user's violations.";
+                "`~violation pardon @username` to pardon a user's violations.\n`~violation add @user <description of violation>` to add a new violation";
         public static readonly string USAGE_HEX2DEC =
-                "~hex2dec <decimal value>";
+                "`~hex2dec <decimal value>`";
         public static readonly string USAGE_DEC2HEX =
-                "~dec2hex <hex value>";
+                "`~dec2hex <hex value>`";
         public static readonly string USAGE_BIN2DEC =
-                "~bin2dec <binary value>";
+                "`~bin2dec <binary value>`";
         public static readonly string USAGE_DEC2BIN =
-                "~dec2bin <decimal value>";
+                "`~dec2bin <decimal value>`";
         public static readonly string USAGE_LOOKUP =
-                "~lookup <keyword> <@ optional user>";
+                "`~lookup <keyword> <@ optional user>`";
         public static readonly string USAGE_DEEPSEARCH =
-                "~deepsearch <keyword>";
+                "`~deepsearch <keyword>`";
         public static readonly string USAGE_LMGTFY =
-                "~lmgtfy <google search string>";
+                "`~lmgtfy <google search string>`";
         public static readonly string USAGE_YAML2JSON =
-                "~yaml2json <yaml code>";
+                "`~yaml2json <yaml code>`";
         public static readonly string USAGE_JSON2YAML =
-                "~json2yaml <json code>";
+                "`~json2yaml <json code>`";
         public static readonly string USAGE_SUBSCRIBE =
                 "`~subscribe <tag>` to subscribe\n`~subscribe list` to see all subscribed tags.";
         public static readonly string USAGE_UNSUBSCRIBE =

@@ -1,19 +1,37 @@
 [
   {
-    "ViolatorId": 331436841817604097,
-    "ViolatorName": "skalavala",
+    "ID": 0,
+    "User": null,
     "Violations": [
       {
-        "ViolationDescription": "Codewall",
-        "ViolationDateTime": "2018-12-22T16:12:21.1009783-05:00",
-        "ViolationChannel": "@skalavala#0375",
-        "ViolationExtraData": null
+        "Description": null,
+        "Date": "0001-01-01T00:00:00",
+        "Channel": null,
+        "ExtraData": null
       },
       {
-        "ViolationDescription": "Codewall",
-        "ViolationDateTime": "2018-12-22T16:15:09.6579017-05:00",
-        "ViolationChannel": "@skalavala#0375",
-        "ViolationExtraData": null
+        "Description": null,
+        "Date": "0001-01-01T00:00:00",
+        "Channel": null,
+        "ExtraData": null
+      }
+    ]
+  },
+  {
+    "ID": 331436841817604097,
+    "User": "skalavala",
+    "Violations": [
+      {
+        "Description": "hello",
+        "Date": "2018-12-23T00:55:15.9310705-05:00",
+        "Channel": "botspam",
+        "ExtraData": null
+      },
+      {
+        "Description": "working too hard!",
+        "Date": "2018-12-23T00:57:23.6908522-05:00",
+        "Channel": "botspam",
+        "ExtraData": null
       }
     ]
   }
