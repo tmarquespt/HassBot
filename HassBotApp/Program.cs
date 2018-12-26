@@ -11,7 +11,7 @@ namespace HassBotApp
     {
         static void Main(string[] args)
         {
-            // initialize the log4net
+            // initialize the log4net.
             log4net.Config.XmlConfigurator.Configure();
 
             // start the bot
