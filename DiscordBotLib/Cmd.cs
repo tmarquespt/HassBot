@@ -34,9 +34,12 @@ namespace DiscordBotLib
             if (cmd.ToLower() == "refresh")
             {
                 HassBotCommands.ReloadData();
+                Sitemap.ReloadData();
+                BlockedDomains.ReloadData();
+
                 embed.WithTitle(Constants.EMOJI_INFORMATION);
                 embed.WithColor(Helper.GetRandomColor());
-                embed.AddField("Success!", "Commands are successfully updated. Go ahead and run your commands now!");
+                embed.AddField("Success!", "Commands, Sitemap and Blocked domains are reloaded and ready to go!");
                 await ReplyAsync(string.Empty, false, embed);
                 return;
             }

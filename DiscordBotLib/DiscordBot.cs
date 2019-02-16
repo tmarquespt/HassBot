@@ -137,6 +137,9 @@ namespace DiscordBotLib
             // check if the user was in "away" mode. if it is, the user is no longer "away"
             AFKManager.TheAFKManager.RemoveAFKUserById(context.User.Id);
 
+            // Block/Remove messages that contain harmful links
+            await Helper.CheckBlockedDomains(message.Content, context);
+
             // YAML verification
             await Helper.ReactToYaml(message.Content, context);
 

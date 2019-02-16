@@ -32,3 +32,4 @@ secret.txt
 !DiscordBotLib/packages.config
 !HassBotUtils/packages.config
 !HassBotApp/packages.config
+*.log

@@ -220,7 +220,7 @@ namespace DiscordBotLib
             }
         }
 
-        internal static async Task ReactToJson(string content, SocketCommandContext context)
+        public static async Task ReactToJson(string content, SocketCommandContext context)
         {
             if (!(content.Contains(JSON_START) || content.Contains(JSON_END)))
                 return;
@@ -243,6 +243,29 @@ namespace DiscordBotLib
             {
                 var errorEmoji = new Emoji(BAD_EMOJI);
                 await context.Message.AddReactionAsync(errorEmoji);
+            }
+        }
+
+        public static async Task CheckBlockedDomains(string content, SocketCommandContext context)
+        {
+            List<BlockedDomainDTO> blockedDomains = BlockedDomains.Instance.Domains();
+            foreach (BlockedDomainDTO domain in blockedDomains)
+            {
+                if (content.Contains(domain.Url))
+                {
+                    string maskedUrl = domain.Url.Replace(".", "_dot_");
+                    // DM the message to the user, so that they can copy/paste without domain name/links
+                    // save time, so that tey don't have to re-type the whole message :)
+                    var dmChannel = await context.User.GetOrCreateDMChannelAsync();
+                    await dmChannel.SendMessageAsync(string.Format(Constants.USER_MESSAGE_BLOCKED_URL, maskedUrl, domain.Reason, content));
+
+                    // delete the message
+                    await context.Message.DeleteAsync();
+
+                    // show message
+                    string msg = string.Format(Constants.ERROR_BLOCKED_URL, context.User.Mention, maskedUrl, domain.Reason);
+                    await context.Message.Channel.SendMessageAsync(msg);
+                }
             }
         }
 

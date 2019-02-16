@@ -25,6 +25,13 @@ namespace HassBotData
             File.WriteAllText(filePath, json);
         }
 
+        public static List<BlockedDomainDTO> LoadBlockedDomains(string filePath)
+        {
+            if (!File.Exists(filePath)) return null;
+            string json = File.ReadAllText(filePath);
+            return JsonConvert.DeserializeObject<List<BlockedDomainDTO>>(json);
+        }
+
         public static List<AFKDTO> LoadAFKUsers(string filePath)
         {
             if (!File.Exists(filePath)) return null;

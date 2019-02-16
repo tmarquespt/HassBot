@@ -37,6 +37,12 @@ namespace HassBotDTOs
         public int CommandCount { get; set; }
     }
 
+    public class BlockedDomainDTO
+    {
+        public string Url { get; set; }
+        public string Reason { get; set; }
+    }
+
     public class CommandDTOComparer : IEqualityComparer<CommandDTO>
     {
         public bool Equals(CommandDTO x, CommandDTO y)

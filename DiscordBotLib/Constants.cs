@@ -120,6 +120,10 @@ namespace DiscordBotLib
                 "Failed to refresh lookup data! contact @skalavala at https://www.github.com/skalavala";
         public static readonly string LET_ME_GOOGLE =
                 "Let me Google that for you...";
+        public static readonly string ERROR_BLOCKED_URL =
+                "{0} Your message has been deleted as it contains a link or a domain name '{1}' that is on the blocked list because of: '**{2}**'.\nPlease re-post by removing/changing the domain name/link. Your original message has been DM'ed to you.";
+        public static readonly string USER_MESSAGE_BLOCKED_URL =
+                "Here is your original message you posted earlier that was blocked. You can re-post by removing/changing the domain name/link: {0}\nReason for deletion: **{1}**\nYour message: {2}";
 
         /// <summary>
         /// Emojis

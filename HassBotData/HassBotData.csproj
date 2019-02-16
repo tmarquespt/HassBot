@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AFKManager.cs" />
+    <Compile Include="BlockedDomains.cs" />
     <Compile Include="CommandManager.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="HassBotCommands.cs" />
