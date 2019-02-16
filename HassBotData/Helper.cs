@@ -21,6 +21,9 @@ namespace HassBotData
         {
             try
             {
+                if (File.Exists(localFilePath))
+                    File.Delete(localFilePath);
+
                 // The Home Assistant web site has stopped support for TLS 1.0 - which is used bydefault.
                 // Let's force it to use TLS 1.2 - otherwise it will throw the following error:
                 // The underlying connection was closed: An unexpected error occurred on a send.
@@ -33,25 +36,6 @@ namespace HassBotData
             {
                 logger.Error(string.Format(Constants.ERR_DOWNLOADING_FILE, targetUrl), e);
             }
-        }
-
-        public static string DownloadBreakingChanges(string url)
-        {
-            try
-            {
-                // The Home Assistant web site has stopped support for TLS 1.0 - which is used bydefault.
-                // Let's force it to use TLS 1.2 - otherwise it will throw the following error:
-                // The underlying connection was closed: An unexpected error occurred on a send.
-                System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
-                WebClient wc = new WebClient();
-                string data = wc.DownloadString(url);
-                return data;
-            }
-            catch (Exception e)
-            {
-                logger.Error(string.Format(Constants.ERR_DOWNLOADING_FILE, url), e);
-            }
-            return string.Empty;
         }
     }
 }

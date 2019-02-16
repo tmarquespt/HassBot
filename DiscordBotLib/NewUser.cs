@@ -33,15 +33,12 @@ namespace DiscordBotLib
 
         private static void GetWelcomeMessage(StringBuilder sb, SocketGuildUser user)
         {
-
-            string botspamChannel = AppSettingsUtil.AppSettingsString("botspamChannel", false, string.Empty);
-
             sb.Append($"Hello, {user.Mention}! Welcome to Home Assistant Discord Channel.\n\n");
             sb.Append("These are the rules you **MUST** follow in order to get support from the members.\n\n");
 
             sb.Append("Feel free to introduce yourself, as we are all friends here.\n");
             sb.Append("Do not insult, belittle, or abuse your fellow community members. Any reports of abuse will not be taken lightly and will lead to a ban.\n");
-            sb.Append(string.Format("Head over to {0} channel and run the command `~help` to get started.\n\n", botspamChannel));
+            sb.Append("Head over to #botspam channel and run the command `~help` to get started.\n\n");
             sb.Append("We hope you enjoy the company of many talented individuals here!\n\n");
 
             sb.Append("A few more **important things** to remember:\n\n");

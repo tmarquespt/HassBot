@@ -7,34 +7,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using HassBotUtils;
 namespace HassBotData
 {
     public class Persistence
     {
-
-        public static List<CommandDTO> LoadCommands(string filePath)
+        public static List<CommandDTO> LoadCommands()
         {
-            if (!File.Exists(filePath)) return null;
-            string json = File.ReadAllText(filePath);
+            string remoteurl = AppSettingsUtil.AppSettingsString("CommandsUrl", true, string.Empty);
+            string localPath = AppSettingsUtil.AppSettingsString("CommandsLocalPath", true, string.Empty);
+
+            Helper.DownloadFile(remoteurl, localPath);
+
+            if (!File.Exists(localPath))
+                return null;
+
+            string json = File.ReadAllText(localPath);
             return JsonConvert.DeserializeObject<List<CommandDTO>>(json);
         }
 
-        public static void SaveCommands(List<CommandDTO> commands, string filePath)
+        public static List<BlockedDomainDTO> LoadBlockedDomains()
         {
-            string json = JsonConvert.SerializeObject(commands, Formatting.Indented);
-            File.WriteAllText(filePath, json);
-        }
+            string remoteurl = AppSettingsUtil.AppSettingsString("BlockedDomainsUrl", true, string.Empty);
+            string localPath = AppSettingsUtil.AppSettingsString("BlockedDomainsLocalPath", true, string.Empty);
 
-        public static List<BlockedDomainDTO> LoadBlockedDomains(string filePath)
-        {
-            if (!File.Exists(filePath)) return null;
-            string json = File.ReadAllText(filePath);
+            Helper.DownloadFile(remoteurl, localPath);
+
+            if (!File.Exists(localPath))
+                return null;
+            string json = File.ReadAllText(localPath);
             return JsonConvert.DeserializeObject<List<BlockedDomainDTO>>(json);
         }
 
         public static List<AFKDTO> LoadAFKUsers(string filePath)
         {
-            if (!File.Exists(filePath)) return null;
+            if (!File.Exists(filePath))
+                return null;
+
             string json = File.ReadAllText(filePath);
             return JsonConvert.DeserializeObject<List<AFKDTO>>(json);
         }
@@ -47,7 +56,9 @@ namespace HassBotData
 
         public static List<SubscribeDTO> LoadSubscriptions(string filePath)
         {
-            if (!File.Exists(filePath)) return null;
+            if (!File.Exists(filePath))
+                return null;
+
             string json = File.ReadAllText(filePath);
             return JsonConvert.DeserializeObject<List<SubscribeDTO>>(json);
         }
@@ -60,7 +71,9 @@ namespace HassBotData
 
         public static List<ViolatorDTO> LoadViolations(string filePath)
         {
-            if (!File.Exists(filePath)) return null;
+            if (!File.Exists(filePath))
+                return null;
+
             string json = File.ReadAllText(filePath);
             return JsonConvert.DeserializeObject<List<ViolatorDTO>>(json);
         }

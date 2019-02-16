@@ -150,24 +150,16 @@ namespace DiscordBotLib
                         uniqueUsers.AddRange(SubscriptionManager.TheSubscriptionManager.GetSubscribersByTag(tag));
                     }
 
-                    // get the server guild from config file
-                    ulong serverGuild = (ulong)AppSettingsUtil.AppSettingsLong("serverGuild", true, 330944238910963714);
-                    var guild = context.Client.GetGuild(serverGuild);
-                    if (null == guild)
-                        return;
-
                     // now that we have list of users that are interested in the tag, and the tags match in description/author name/title
                     // send the url of the message to each of the subscriber using a DM
                     foreach (SubscribeDTO usr in uniqueUsers.Distinct().ToList())
                     {
-                        SocketUser user = guild.GetUser(usr.Id);
-                        var dmChannel = await user.GetOrCreateDMChannelAsync();
-
                         string msg = string.Format("Subscription Alert: Found '{0}' in the '{1}' of the PR/Issue: {2}",
                                                     GetListAsCommaSeparated(matchedTags),
                                                     GetListAsCommaSeparated(matchedLocations),
                                                     e.Url);
 
+                        var dmChannel = await HAChannels.GetUsersDMChannel(context, usr.Id);
                         await dmChannel.SendMessageAsync(msg);
                     }
                 }
@@ -253,18 +245,38 @@ namespace DiscordBotLib
             {
                 if (content.Contains(domain.Url))
                 {
-                    string maskedUrl = domain.Url.Replace(".", "_dot_");
-                    // DM the message to the user, so that they can copy/paste without domain name/links
-                    // save time, so that tey don't have to re-type the whole message :)
-                    var dmChannel = await context.User.GetOrCreateDMChannelAsync();
-                    await dmChannel.SendMessageAsync(string.Format(Constants.USER_MESSAGE_BLOCKED_URL, maskedUrl, domain.Reason, content));
+                    if (domain.Ban == true )
+                    {
+                        // exclude Mods from the bans
+                        if (IsMod(context.User))
+                            return;
 
-                    // delete the message
-                    await context.Message.DeleteAsync();
+                        // Ban the user
+                        string reason = string.Format(Constants.BAN_MESSAGE, context.User.Username, domain.Reason);
+                        await context.Guild.AddBanAsync(context.User, 1, reason, null);
 
-                    // show message
-                    string msg = string.Format(Constants.ERROR_BLOCKED_URL, context.User.Mention, maskedUrl, domain.Reason);
-                    await context.Message.Channel.SendMessageAsync(msg);
+                        // post a message in the channel about the permanent ban
+                        await context.Message.Channel.SendMessageAsync("BAM!!! " + reason );
+
+                        // send a message to #botspam channel as well
+                        string detailedMessage = "Woohoo! " + reason + " Posted message: " + content;
+                        await HAChannels.ModLogChannel(context).SendMessageAsync(detailedMessage, false, null);
+                    }
+                    else
+                    {
+                        string maskedUrl = domain.Url.Replace(".", "_dot_");
+                        // DM the message to the user, so that they can copy/paste without domain name/links
+                        // save time, so that tey don't have to re-type the whole message :)
+                        var dmChannel = await context.User.GetOrCreateDMChannelAsync();
+                        await dmChannel.SendMessageAsync(string.Format(Constants.USER_MESSAGE_BLOCKED_URL, maskedUrl, domain.Reason, content));
+
+                        // delete the message
+                        await context.Message.DeleteAsync();
+
+                        // show message
+                        string msg = string.Format(Constants.ERROR_BLOCKED_URL, context.User.Mention, maskedUrl, domain.Reason);
+                        await context.Message.Channel.SendMessageAsync(msg);
+                    }
                 }
             }
         }
@@ -291,7 +303,7 @@ namespace DiscordBotLib
             }
         }
 
-        public static string LookupString(string searchString)
+        public static string SitemapLookup(string searchString)
         {
             string[] searchWords = null;
             StringBuilder sb = new StringBuilder();
@@ -343,6 +355,62 @@ namespace DiscordBotLib
             }
 
             return sb.ToString();
+        }
+
+        public static async Task RefreshData(SocketCommandContext context)
+        {
+            var embed = new EmbedBuilder();
+            try
+            {
+                Sitemap.ReloadData();
+                BlockedDomains.ReloadData();
+                HassBotCommands.ReloadData();
+            }
+            catch
+            {
+                embed.WithColor(Color.Red);
+                embed.AddInlineField(Constants.EMOJI_FAIL, Constants.COMMAND_REFRESH_FAILED);
+                await context.Channel.SendMessageAsync(string.Empty, false, embed);
+                return;
+            }
+
+            embed.WithColor(Helper.GetRandomColor());
+            embed.AddInlineField(Constants.EMOJI_THUMBSUP, Constants.COMMAND_REFRESH_SUCCESSFUL);
+            await context.Channel.SendMessageAsync(string.Empty, false, embed);
+        }
+
+        public static bool IsMod(SocketUser user)
+        {
+            // get the list of mods from config file
+            string mods = AppSettingsUtil.AppSettingsString("mods",
+                                                             true,
+                                                             string.Empty);
+            string[] moderators = mods.Split(',');
+            var results = Array.FindAll(moderators,
+                                        s => s.Trim().Equals(user.Username,
+                                        StringComparison.OrdinalIgnoreCase));
+            if (results.Length == 1)
+                return true;
+            else
+                return false;
+        }
+
+        public static async Task<bool> VerifyMod(SocketCommandContext ctx)
+        {
+            if (!Helper.IsMod(ctx.User))
+            {
+                var embed = new EmbedBuilder()
+                {
+                    Title = Constants.EMOJI_STOPSIGN,
+                    Color = Color.DarkRed,
+                };
+                embed.AddInlineField(Constants.ACCESS_DENIED,
+                                     Constants.ACCESS_DENIED_MESSAGE);
+
+                await ctx.Channel.SendMessageAsync(string.Empty, false, embed);
+                return false;
+            }
+            return true;
         }
     }
 }

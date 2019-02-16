@@ -29,7 +29,6 @@ namespace HassBotData
         {
             try
             {
-
                 _afkUsersFile = AppSettingsUtil.AppSettingsString("afkUsersFile", true, string.Empty);
 
                 if (Persistence.FileExists(_afkUsersFile))

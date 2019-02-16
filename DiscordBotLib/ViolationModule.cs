@@ -20,7 +20,7 @@ namespace DiscordBotLib
         [Command("violation")]
         public async Task ViolationAsync()
         {
-            if (!await VerifyMod(Context))
+            if (!await Helper.VerifyMod(Context))
                 return;
 
             await base.DisplayUsage(Constants.USAGE_VIOLATION);
@@ -29,14 +29,13 @@ namespace DiscordBotLib
         [Command("violation")]
         public async Task ViolationAsync([Remainder]string cmd)
         {
-            if (!await VerifyMod(Context))
+            if (!await Helper.VerifyMod(Context))
                 return;
 
             string mentionedUsers = base.MentionedUsers().Trim();
             string command = cmd.Split(' ')[0];
             if (command.ToLower() == "pardon")
             {
-                
                 string[] users = mentionedUsers.Split(' ');
                 foreach (string usr in users)
                 {
@@ -58,31 +57,6 @@ namespace DiscordBotLib
                     }
                 }
             }
-            //else if (command.ToLower() == "add")
-            //{
-            //    if (mentionedUsers == string.Empty)
-            //    {
-            //        await base.DisplayUsage(Constants.USAGE_VIOLATION);
-            //        return;
-            //    }
-            //    else
-            //    {
-            //        string tmp = mentionedUsers.Replace("@!", "@");
-            //        string message  = cmd.Replace(tmp, string.Empty);
-            //        message = message.Replace("add", string.Empty);
-            //        message = message.Trim();
-            //        if (message == string.Empty)
-            //        {
-            //            await base.DisplayUsage(Constants.USAGE_VIOLATION);
-            //            return;
-            //        }
-            //        else
-            //        {
-            //            ViolationsManager.TheViolationsManager.AddIncident(Context.User.Id, Context.User.Username, message, Context.Channel.Name);
-            //            await ReplyAsync(":ticket: A violation has been successfully issued to " + mentionedUsers + ", with a message: `" + message + "`", false, null);
-            //        }
-            //    }
-            //}
         }
     }
 }

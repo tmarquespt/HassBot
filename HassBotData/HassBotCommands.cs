@@ -27,6 +27,10 @@ namespace HassBotData
         {
             ReloadData();
         }
+        public static HassBotCommands Instance
+        {
+            get { return lazy.Value; }
+        }
 
         public static void ReloadData()
         {
@@ -35,27 +39,11 @@ namespace HassBotData
                 if (null != _commands)
                     _commands.Clear();
 
-                string localPath = AppSettingsUtil.AppSettingsString("hassbotCommandPath", true, string.Empty);
-                string remoteurl = AppSettingsUtil.AppSettingsString("hassbotCommandUrl", true, string.Empty);
-
-                if (File.Exists(localPath))
-                    File.Delete(localPath);
-
-                Helper.DownloadFile(remoteurl, localPath);
-
-                _commands = Persistence.LoadCommands(localPath);
+                _commands = Persistence.LoadCommands();
             }
             catch (Exception e)
             {
                 throw new Exception(Constants.ERR_COMMANDS_FILE, e);
-            }
-        }
-
-        public static HassBotCommands Instance
-        {
-            get
-            {
-                return lazy.Value;
             }
         }
 

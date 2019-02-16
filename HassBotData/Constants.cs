@@ -18,5 +18,7 @@ namespace HassBotData
                 "Failed to load violations.json file";
         public static readonly string ERR_DOWNLOADING_FILE =
                 "Error downloading {0} file.";
+        public static readonly string ERR_BLOCKED_DOMAINS_FILE =
+                "Failed to load blocked_domains.json file";
     }
 }

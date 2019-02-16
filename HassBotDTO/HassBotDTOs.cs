@@ -32,15 +32,13 @@ namespace HassBotDTOs
     {
         public string CommandName { get; set; }
         public string CommandData { get; set; }
-        public string CommandAuthor { get; set; }
-        public DateTime CommandCreatedDate { get; set; }
-        public int CommandCount { get; set; }
     }
 
     public class BlockedDomainDTO
     {
         public string Url { get; set; }
         public string Reason { get; set; }
+        public bool Ban { get; set; }
     }
 
     public class CommandDTOComparer : IEqualityComparer<CommandDTO>

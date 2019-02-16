@@ -34,7 +34,7 @@ namespace DiscordBotLib
             sb.Append(string.Format(Constants.WELCOME_MESSAGE, serverName));
 
             if (string.Empty != welcomerulesChannel) {
-                sb.Append(string.Format(Constants.WELCOME_RULES_MESSAGE, welcomerulesChannel));
+                sb.Append(string.Format(Constants.WELCOME_RULES_MESSAGE, "<#" + welcomerulesChannel + ">" ));
             }
             sb.Append(Constants.CODE_SHARING_MESSAGE);
 

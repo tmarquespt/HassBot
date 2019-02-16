@@ -35,7 +35,7 @@ namespace DiscordBotLib
         }
 
         private async Task LookupCommand(string input) {
-            string result = Helper.LookupString(input);
+            string result = Helper.SitemapLookup(input);
             result = result.Trim();
 
             // mention users if any

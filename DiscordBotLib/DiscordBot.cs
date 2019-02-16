@@ -192,8 +192,7 @@ namespace DiscordBotLib
                     {
                         // hastebin paste ALSO failed... just warn the user, and drop a poop emoji :)
                         var poopEmoji = new Emoji(POOP);
-                        string msxLimitMsg = AppSettingsUtil.AppSettingsString("maxLineLimitMessage", false, MAX_LINE_LIMIT);
-                        await message.Channel.SendMessageAsync(string.Format(msxLimitMsg, context.User.Mention));
+                        await message.Channel.SendMessageAsync(string.Format(Constants.MAXLINELIMITMESSAGE, context.User.Mention));
                         await context.Message.AddReactionAsync(poopEmoji);
                         return;
                     }
@@ -244,9 +243,7 @@ namespace DiscordBotLib
             await dmChannel.SendMessageAsync(sb.ToString());
 
             // send a message to #botspam channel as well
-            ulong modlogChannelId = (ulong)AppSettingsUtil.AppSettingsLong("modlogChannel", true, 473590680103419943);
-            var modlogChannel = context.Client.GetChannel(modlogChannelId) as ITextChannel;
-            await modlogChannel.SendMessageAsync("User " + context.User.Mention  + " was given a warning for violating rules for 3 consecutive times!", false, null);
+            await HAChannels.ModLogChannel(context).SendMessageAsync("User " + context.User.Mention + " was given a warning for violating rules for 3 consecutive times!", false, null);
         }
 
         private static async Task KickMessage(SocketUserMessage message, SocketCommandContext context)
@@ -259,9 +256,9 @@ namespace DiscordBotLib
             sb.Append("\n\n");
             sb.Append("We got a bit of a problem here. We have some ground rules that we **really** like you to follow.");
             sb.Append("\n");
-            sb.Append("Please make sure you pay **extra** attention to the welcome notes and read descriptions of each channel carefully.");
+            sb.Append("Please make sure you pay **EXTRA** attention to the welcome notes and read descriptions of each channel carefully.");
             sb.Append("\n\n");
-            sb.Append("You got kicked out of the Discord server for posting code that is more than 15 lines **FOR MORE THAN 5 TIMES**. This is not good!");
+            sb.Append("You got kicked out of the Discord server for posting code that is more than 15 lines **FOR MORE THAN 5 TIMES**.");
             sb.Append("\n\n");
             sb.Append("We would love to work with you to help you provide the support you need. For that, we all have to follow the rules and keep it civil.");
             sb.Append("\n");
@@ -280,9 +277,7 @@ namespace DiscordBotLib
             await message.Channel.SendMessageAsync("User " + context.User.Mention + " got kicked out because of posting too many codewalls!");
 
             // send a message to #botspam channel as well
-            ulong modlogChannelId = (ulong)AppSettingsUtil.AppSettingsLong("modlogChannel", true, 473590680103419943);
-            var modlogChannel = context.Client.GetChannel(modlogChannelId) as ITextChannel;
-            await modlogChannel.SendMessageAsync("User " + context.User.Mention + " got kicked out for violating rules for more than 5 times!", false, null);
+            await HAChannels.ModLogChannel(context).SendMessageAsync("User " + context.User.Mention + " got kicked out for violating rules for more than 5 times!", false, null);
 
             // finally clear the violations, so that the user can start fresh
             ViolationsManager.TheViolationsManager.ClearViolationsForUser(context.User.Id);

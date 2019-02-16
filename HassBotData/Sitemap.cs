@@ -21,6 +21,11 @@ namespace HassBotData
             // private .ctor
         }
 
+        public static Sitemap Instance
+        {
+            get { return lazy.Value; }
+        }
+
         static Sitemap()
         {
             string siteMap = AppSettingsUtil.AppSettingsString("sitemapPath", true, string.Empty);
@@ -40,14 +45,6 @@ namespace HassBotData
             string siteMapPath = AppSettingsUtil.AppSettingsString("sitemapPath", true, string.Empty);
             Helper.DownloadFile(sitemapUrl, siteMapPath);
             doc.Load(siteMapPath);
-        }
-
-        public static Sitemap Instance
-        {
-            get
-            {
-                return lazy.Value;
-            }
         }
 
         public static XmlDocument SiteMapXmlDocument

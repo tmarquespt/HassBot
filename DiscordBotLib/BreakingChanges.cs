@@ -28,7 +28,7 @@ namespace DiscordBotLib
             var embed = new EmbedBuilder();
 
             // get the release notes of the specified version number
-            string url = Helper.LookupString("release-" + version);
+            string url = Helper.SitemapLookup("release-" + version);
             url = url.Replace("\n", string.Empty);
 
             if (url == string.Empty)

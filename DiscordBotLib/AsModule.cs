@@ -25,7 +25,7 @@ namespace DiscordBotLib
 
         [Command("as")]
         public async Task AsAsync() {
-            if (!await VerifyMod(Context))
+            if (!await Helper.VerifyMod(Context))
                 return;
 
             await base.DisplayUsage(Constants.USAGE_AS);
@@ -33,7 +33,7 @@ namespace DiscordBotLib
 
         [Command("as")]
         private async Task AsCommand([Remainder]string cmd) {
-            if (!await VerifyMod(Context))
+            if (!await Helper.VerifyMod(Context))
                 return;
 
             // delete the original message

@@ -28,6 +28,11 @@ namespace HassBotData
             ReloadData();
         }
 
+        public static BlockedDomains Instance
+        {
+            get { return lazy.Value; }
+        }
+
         public static void ReloadData()
         {
             try
@@ -35,41 +40,12 @@ namespace HassBotData
                 if (null != _domains)
                     _domains.Clear();
 
-                string remoteurl = AppSettingsUtil.AppSettingsString("hassbotBlockedDomainsUrl", true, string.Empty);
-                string localPath = AppSettingsUtil.AppSettingsString("hassbotBlockedDomainsLocalPath", true, string.Empty);
-
-                if (File.Exists(localPath))
-                    File.Delete(localPath);
-
-                Helper.DownloadFile(remoteurl, localPath);
-
-                _domains = Persistence.LoadBlockedDomains(localPath);
+                _domains = Persistence.LoadBlockedDomains();
             }
             catch (Exception e)
             {
-                throw new Exception(Constants.ERR_COMMANDS_FILE, e);
+                throw new Exception(Constants.ERR_BLOCKED_DOMAINS_FILE, e);
             }
-        }
-
-        public static BlockedDomains Instance
-        {
-            get
-            {
-                return lazy.Value;
-            }
-        }
-
-        public string Lookup(string cmd)
-        {
-            BlockedDomainDTO retDomain = _domains.Find(delegate (BlockedDomainDTO dto)
-            {
-                return dto.Url.Trim().ToLower() == cmd.Trim().ToLower();
-            });
-
-            if (null != retDomain)
-                return retDomain.Url;
-            else
-                return string.Empty;
         }
 
         public List<BlockedDomainDTO> Domains()

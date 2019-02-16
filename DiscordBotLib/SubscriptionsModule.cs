@@ -29,7 +29,7 @@ namespace DiscordBotLib
 
         [Command("subscribe")]
         public async Task SubscribeAsync() {
-            if (! await VerifyMod(Context))
+            if (! await Helper.VerifyMod(Context))
                 return;
 
             await base.DisplayUsage(Constants.USAGE_SUBSCRIBE);
@@ -37,7 +37,7 @@ namespace DiscordBotLib
 
         [Alias("unsubscribe")]
         public async Task UnSubscribeAsync() {
-            if (!await VerifyMod(Context))
+            if (!await Helper.VerifyMod(Context))
                 return;
 
             await base.DisplayUsage(Constants.USAGE_UNSUBSCRIBE);
@@ -45,7 +45,7 @@ namespace DiscordBotLib
 
         [Command("subscribe")]
         public async Task SubscribeAsync([Remainder]string tag) {
-            if (!await VerifyMod(Context))
+            if (!await Helper.VerifyMod(Context))
                 return;
 
             var embed = new EmbedBuilder();
@@ -101,7 +101,7 @@ namespace DiscordBotLib
 
         [Command("unsubscribe")]
         public async Task UnsubscribeAsync([Remainder]string tag) {
-            if (!await VerifyMod(Context))
+            if (!await Helper.VerifyMod(Context))
                 return;
 
             var embed = new EmbedBuilder();

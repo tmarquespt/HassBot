@@ -12,6 +12,8 @@ namespace DiscordBotLib
         /// <summary>
         /// Usage Specific Messages
         /// </summary>
+        public static readonly string TITLE_HASSBOT =
+                "HassBot";
         public static readonly string USAGE_TITLE =
                 "Usage";
         public static readonly string USAGE_AFK =
@@ -72,10 +74,6 @@ namespace DiscordBotLib
                 "You do not have permissions to run this command. Please contact @skalavala to get access.";
         public static readonly string COMMAND_TOTAL =
                 "There are `{0}` custom command(s) available. ";
-        public static readonly string CODESHARE_URL =
-                "https://codeshare.io/new";
-        public static readonly string CODESHARE_MESSAGE =
-                "Click on the link {0} and paste your code there. It makes it easy to collaborate and make changes in real-time.";
         public static readonly string SUCCESS =
                 "Success!";
         public static readonly string COMMAND_SUCCESS_MESSAGE =
@@ -98,6 +96,17 @@ namespace DiscordBotLib
                 "You have not subscribed to '{0}'.";
         public static readonly string INFO_UNSUBSCRIBE_SUCCESS =
                 "Successfully unsubscribed to '{0}'.";
+
+        public static readonly string MAXLINELIMITMESSAGE =
+            "Attention!: Please use <https://www.hastebin.com> to share code that is more than 10-15 lines. You have been warned, {0}!;";
+
+        public static readonly string COMMAND_REFRESH_SUCCESSFUL =
+                "Commands, Sitemap and Blocked Domains are reloaded and ready to go!";
+        public static readonly string COMMAND_REFRESH_FAILED =
+                "Failed to refresh lookup data! contact @skalavala at https://www.github.com/skalavala";
+
+        public static readonly string COMMAND_MESSAGE =
+                "Manage Hassbot data online at <https://github.com/awesome-automations/hassbot-data>. Make sure you run `~command refresh` after updating data online.";
         public static readonly string GOOD_YAML =
                 "That is a perfectly valid YAML!";
         public static readonly string INVALID_YAML =
@@ -110,16 +119,12 @@ namespace DiscordBotLib
                 "Please read {0} \n";
         public static readonly string CODE_SHARING_MESSAGE =
                 "For sharing code, please use <https://www.hastebin.com>\nIf it is less than 10 lines of code, **make sure** it is formatted using below format:\n\\`\\`\\`yaml\ncode\n\\`\\`\\`\n";
-        public static readonly string SHARE_MESSAGE =
-                "Please use https://www.hastebin.com/ or https://paste.ubuntu.com/ to share code.";
         public static readonly string FORMAT_CODE =
                 "Format Code";
-        public static readonly string UPDATE_SUCCESSFUL =
-                "Refreshed lookup data successfully!";
-        public static readonly string UPDATE_FAILED =
-                "Failed to refresh lookup data! contact @skalavala at https://www.github.com/skalavala";
         public static readonly string LET_ME_GOOGLE =
                 "Let me Google that for you...";
+        public static readonly string BAN_MESSAGE =
+                "User **{0}** got permanently banned for posting {1}.";
         public static readonly string ERROR_BLOCKED_URL =
                 "{0} Your message has been deleted as it contains a link or a domain name '{1}' that is on the blocked list because of: '**{2}**'.\nPlease re-post by removing/changing the domain name/link. Your original message has been DM'ed to you.";
         public static readonly string USER_MESSAGE_BLOCKED_URL =
