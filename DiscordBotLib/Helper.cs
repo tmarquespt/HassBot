@@ -13,6 +13,7 @@ using Discord.Commands;
 using System.Collections.Generic;
 using System.Text;
 using System.Xml;
+using System.Text.RegularExpressions;
 
 namespace DiscordBotLib
 {
@@ -236,6 +237,12 @@ namespace DiscordBotLib
                 var errorEmoji = new Emoji(BAD_EMOJI);
                 await context.Message.AddReactionAsync(errorEmoji);
             }
+        }
+
+        public static async Task VerifyUrls(string content, SocketCommandContext context)
+        {
+            Regex re = new Regex(@"((http|ftp|https):\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&amp;:/~\+#]*[\w\-\@?^=%&amp;/~\+#])?)");
+            
         }
 
         public static async Task CheckBlockedDomains(string content, SocketCommandContext context)

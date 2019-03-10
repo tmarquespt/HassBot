@@ -28,8 +28,11 @@ namespace DiscordBotLib
             @"Attention!: Please use https://paste.ubuntu.com to share code or message that is more than 10-15 lines. You have been warned, {0}!\n
               Please read rule #6 here <#331130181102206976>";
 
-        private static readonly string HASTEBIN_MESSAGE =
+        private static readonly string OLD_HASTEBIN_MESSAGE =
             "Please follow the rules, {0}! You have {1} warning(s) left. You posted a message/code that is more than 15 lines. It is moved here --> {2}";
+
+        private static readonly string HASTEBIN_MESSAGE =
+            "{0} posted a message that is too long, it is moved here --> {1}";
 
         private static readonly log4net.ILog logger =
              log4net.LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
@@ -140,6 +143,9 @@ namespace DiscordBotLib
             // Block/Remove messages that contain harmful links
             await Helper.CheckBlockedDomains(message.Content, context);
 
+            // verify URLs
+            await Helper.VerifyUrls(message.Content, context);
+
             // YAML verification
             await Helper.ReactToYaml(message.Content, context);
 
@@ -198,28 +204,28 @@ namespace DiscordBotLib
                     }
                 }
 
-                List<Violation> violations = ViolationsManager.TheViolationsManager.GetIncidentsByUser(context.User.Id);
-                int totalViolations = 0;
-                if (null != violations)
-                    totalViolations = violations.Count;
+                //List<Violation> violations = ViolationsManager.TheViolationsManager.GetIncidentsByUser(context.User.Id);
+                //int totalViolations = 0;
+                //if (null != violations)
+                //    totalViolations = violations.Count;
 
                 // publish the URL link
-                string response = string.Format(HASTEBIN_MESSAGE, context.User.Mention, (5 - totalViolations).ToString(), url);
+                string response = string.Format(HASTEBIN_MESSAGE, context.User.Mention, url);
                 await message.Channel.SendMessageAsync(response);
 
-                // Violation Management
-                ViolationsManager.TheViolationsManager.AddIncident(context.User.Id, context.User.Username, CommonViolationTypes.Codewall.ToString(), context.Channel.Name);                
-                if (null != violations)
-                {
-                    if (violations.Count >= 3 && violations.Count <= 5 )
-                    {
-                        await KickWarningMessage(context);
-                    }
-                    else if (violations.Count > 5)
-                    {
-                        await KickMessage(message, context);
-                    }
-                }
+                //// Violation Management
+                //ViolationsManager.TheViolationsManager.AddIncident(context.User.Id, context.User.Username, CommonViolationTypes.Codewall.ToString(), context.Channel.Name);                
+                //if (null != violations)
+                //{
+                //    if (violations.Count >= 3 && violations.Count <= 5 )
+                //    {
+                //        await KickWarningMessage(context);
+                //    }
+                //    else if (violations.Count > 5)
+                //    {
+                //        await KickMessage(message, context);
+                //    }
+                //}
 
                 // and, delete the original message!
                 await context.Message.DeleteAsync();
