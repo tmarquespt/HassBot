@@ -1,4 +1,4 @@
-# Discord Bot CPHA.tech
+# Discord Bot CPHA Comunidade Portuguesa de HomeAssistant
 
 Currently the bot is running in two different channels 
 1. https://discord.gg/c5DvZ4e (English Home-Assistant Discord Channel)
