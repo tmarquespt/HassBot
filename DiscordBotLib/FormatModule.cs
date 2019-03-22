@@ -36,8 +36,8 @@ namespace DiscordBotLib
             sb.Append("\\`\\`\\`\n");
             sb.Append("código aqui\n");
             sb.Append("\\`\\`\\`\n");
-            sb.Append("Watch the animated gif here: <https://bit.ly/2GbfRJE>\n");
-            sb.Append("**DO NOT** repeat posts. Please edit previously posted message, here is how -> <https://bit.ly/2qOOf1G>");
+            sb.Append("Veja o gif animado aqui: <https://bit.ly/2GbfRJE>\n");
+            sb.Append("** NÃO ** repita as mensagens. Por favor, edite a mensagem postada anteriormente, aqui está como -> <https://bit.ly/2qOOf1G>");
 
             await ReplyAsync(sb.ToString(), false, null);
         }
