@@ -25,18 +25,18 @@ namespace DiscordBotLib
         public async Task Magic8BallAsync([Remainder]string cmd) {
             Random rnd = new Random();
             string[] predictions = {
-                "As If","Ask Me If I Care","Dumb Question Ask Another","Forget About It","Get A Clue","In Your Dreams",
-                "Not A Chance","Obviously","Oh Please","Sure","That's Ridiculous!","Well Maybe","What Do You Think?",
-                "Whatever","Who Cares?","Yeah And I'm The Pope","Yeah Right","You Wish","You've Got To Be Kidding...",
-                "At Least I Love You","Nice Try!","Pure Genius!","That's O.K.","The Sky's The Limit","You're 100% Fun!",
-                "As I See It Yes","Ask Again Later","Better Not Tell You Now","Cannot Predict Now",
-                "Concentrate and Ask Again","Don't Count On It","It Is Certain","Most Likely","My Reply Is No",
-                "My Sources Say No","Outlook Good","Outlook Not So Good","Reply Hazy Try Again","Signs Point to Yes",
-                "Very Doubtful","Without A Doubt","Yes","Yes - Definitely","You May Rely On It","Absolutely",
-                "Answer Unclear Ask Later","Cannot Foretell Now","Can't Say Now","Chances Aren't Good",
-                "Consult Me Later","Don't Bet On It","Focus And Ask Again","Indications Say Yes","Looks Like Yes",
-                "No","No Doubt About It","Positively","Prospect Good","So It Shall Be","The Stars Say No",
-                "Unlikely","Very Likely","Yes","You Can Count On It" };
+                "Como se", "pergunte-me se eu me importo", "pergunta muda peça a outro", "esqueça-o", "obtenha uma pista", "nos teus sonhos",
+                "Não é uma chance", "Obviamente", "Oh, por favor", "Claro", "Isso é ridículo!", "Bem, talvez", "O que você acha?",
+                "Seja qual for", "Quem se importa?", "Sim e eu sou o Papa", "Yeah Right", "Você deseja", "Você so pode estar brincando ...",
+                "Pelo menos eu te amo", "boa tentativa!", "Pure Genius!", "Isso é O.K.", "O limite do céu", "Você é 100% divertido!",
+                "Como eu vejo sim", "Perguntar novamente depois", "Melhor não dizer agora", "Não é possível prever agora",
+                "Concentre-se e pergunte novamente", "Não conte com isso", "É certo", "mais provável", "Minha resposta é não",
+                "Minhas fontes dizem que não", "Outlook bom", "Outlook não é tão bom", "Resposta Hazy tente novamente", "sinais apontam para Sim",
+                "Muito Duvidoso", "Sem Dúvida", "Sim", "Sim - Definitivamente", "Você Pode Confiar Nele", "Absolutamente",
+                "Resposta não clara perguntar depois", "Não é possível prever agora", "Não posso dizer agora", "As chances não são boas",
+                "Consultar-me depois", "Não apostar nele", "Focar e perguntar novamente", "Indicações dizer sim", "parece sim",
+                "No", "No Doubt About It", "Positivamente", "Prospect Good", "So It Shall Be", "As estrelas dizem não",
+                "Improvável", "muito provável", "sim", "você pode contar com isso" };
 
             var embed = new EmbedBuilder();
             embed.WithTitle(":8ball:");
