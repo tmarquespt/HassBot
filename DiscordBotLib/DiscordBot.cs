@@ -24,11 +24,12 @@ namespace DiscordBotLib
         private static readonly string POOP = "💩";
 
         private static readonly string TOKEN = "token";
-        private static readonly string MAX_LINE_LIMIT =
-"@ Atenção !: Por favor use https://paste.ubuntu.com para compartilhar código ou mensagem com mais de 10-15 linhas. Você foi avisado, {0}!     Por favor, leia a regra # 6 aqui <#331130181102206976>";
+        private static readonly string MAX_LINE_LIMIT =           
+            @"Atenção !: Por favor use https://paste.ubuntu.com para compartilhar código ou mensagem com mais de 10-15 linhas. Você foi avisado, {0}!\n
+              Por favor, leia a regra # 6 aqui <#331130181102206976>";
 
         private static readonly string OLD_HASTEBIN_MESSAGE =
-"Por favor, siga as regras, {0}! Você tem {1} aviso (s) restante. Você postou uma mensagem ou um código com mais de 15 linhas. Ele foi movido para aqui -> {2}";
+           "Por favor, siga as regras, {0}! Você tem {1} aviso (s) restante. Você postou uma mensagem ou um código com mais de 15 linhas. Ele foi movido para aqui -> {2}";
 
         private static readonly string HASTEBIN_MESSAGE =
             "{0} postou uma mensagem que é muito longa, ela foi movida para aqui -> {1}";
