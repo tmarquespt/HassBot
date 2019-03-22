@@ -34,7 +34,7 @@ namespace DiscordBotLib
         private static void GetWelcomeMessage(StringBuilder sb, SocketGuildUser user)
         {
             sb.Append($"Olá, {user.Mention}! Bem-vindo ao servidor de Discord da Comunidade Portuguesa de Home Assistant.\n\n");
-            sb.Append("Por favor, lê com atenção o Canal de regras-de-utilização antes de começar a utilizar os nossos canais.\n\n");
+            sb.Append("Por favor, lê com atenção o Canal de ** regras-de-utilização**  antes de começar a utilizar os nossos canais.\n\n");
 
             sb.Append(string.Format("Mais uma vez, bem-vindo ao {0} canal!\n\n", user.Guild.Name));
         }
