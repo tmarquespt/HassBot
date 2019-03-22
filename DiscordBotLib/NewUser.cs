@@ -33,19 +33,10 @@ namespace DiscordBotLib
 
         private static void GetWelcomeMessage(StringBuilder sb, SocketGuildUser user)
         {
-            sb.Append($"Hello, {user.Mention}! Welcome to Home Assistant Discord Channel.\n\n");
-            sb.Append("These are the rules you **MUST** follow in order to get support from the members.\n\n");
+            sb.Append($"Olá, {user.Mention}! Bem vindo aos servidor de Discord da Comunidade Portuguesa de Home Assistant.\n\n");
+            sb.Append("Por favor, lê com atenção o Canal de regras-de-utilização antes de começar a utilizar os nossos canais.\n\n");
 
-            sb.Append("Feel free to introduce yourself, as we are all friends here.\n");
-            sb.Append("Do not insult, belittle, or abuse your fellow community members. Any reports of abuse will not be taken lightly and will lead to a ban.\n");
-            sb.Append("Head over to #botspam channel and run the command `~help` to get started.\n\n");
-            sb.Append("We hope you enjoy the company of many talented individuals here!\n\n");
-
-            sb.Append("A few more **important things** to remember:\n\n");
-            sb.Append("1. A maximum of 10-15 lines of code can be posted. For code that is more than 15 lines, please use https://paste.ubuntu.com\n");
-            sb.Append("2. Please make sure you format the code when pasting. Use markdown language when pasting code.\n");
-
-            sb.Append(string.Format("Once again, Welcome to the {0} Channel!\n\n", user.Guild.Name));
+            sb.Append(string.Format("Mais uma vez, bem-vindo ao {0} canal!\n\n", user.Guild.Name));
         }
 
         private static string GetRandomFunFact(string userHandle)
