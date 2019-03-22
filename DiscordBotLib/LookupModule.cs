@@ -70,7 +70,7 @@ namespace DiscordBotLib
 
             if (result.Length > 1900) {
                 result = result.Substring(0, 1850);
-                result += "...\n\nThe message is truncated because it is too long. You may want to change the search criteria.";
+                result += "...\n\nA mensagem é truncada porque é muito longa. Você pode querer alterar os critérios de pesquisa.";
             }
 
             // Send a Direct Message to the User with search information
