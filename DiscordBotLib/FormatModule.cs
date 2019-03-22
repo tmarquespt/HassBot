@@ -32,7 +32,7 @@ namespace DiscordBotLib
             if (mentionedUsers.Trim() != string.Empty )
                 sb.Append(mentionedUsers + " ");
 
-            sb.Append("To format your text as code, enter three backticks on the first line, press Enter for a new line, paste your code, press Enter again for another new line, and lastly three more backticks. Here's an example:\n\n");
+            sb.Append("Para formatar o teu texto como código, insira três backticks na primeira linha, pressione Enter para uma nova linha, cole seu código, pressione Enter novamente para outra nova linha e, por último, três outros backticks. Aqui está um exemplo:\n\n");
             sb.Append("\\`\\`\\`\n");
             sb.Append("code here\n");
             sb.Append("\\`\\`\\`\n");
