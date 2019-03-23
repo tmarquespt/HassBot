@@ -75,7 +75,7 @@ namespace DiscordBotLib
         public static readonly string COMMAND_TOTAL =
                 "There are `{0}` custom command(s) available. ";
         public static readonly string SUCCESS =
-                "Success!";
+                "Successo!";
         public static readonly string COMMAND_SUCCESS_MESSAGE =
                 "Go ahead and run the command using `~{0}`";
         public static readonly string TITLE_SUBSCRIBE =
