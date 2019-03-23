@@ -41,7 +41,7 @@ namespace DiscordBotLib
             embed.AddInlineField("Memoria", $"{ GetMemoryUsage() }");
             embed.AddInlineField("Discord Bibloteca Versão", $"{ GetLibrary() }");
             embed.AddInlineField("Latencia", $" { GetLatency() }");
-            embed.AddField ("GitHub", "Você pode encontrar o código fonte aqui https://github.com/skalavala/HassBot")
+            embed.AddField ("GitHub", "Você pode encontrar o código fonte aqui https://github.com/skalavala/HassBot");
 
             // mention users if any
             string mentionedUsers = base.MentionedUsers();
