@@ -39,7 +39,7 @@ namespace DiscordBotLib
             embed.AddInlineField("Total de usuários", $"{Context.Client.Guilds.Sum(g => g.Users.Count)}");
             embed.AddInlineField("Heap Size", $"{GetHeapSize()} MiB");
             embed.AddInlineField("Memoria", $"{ GetMemoryUsage() }");
-            embed.AddInlineField("Discord Bibloteca Versão", $"{ GetLibrary() }");
+            embed.AddInlineField("Discord Lib Versão", $"{ GetLibrary() }");
             embed.AddInlineField("Latencia", $" { GetLatency() }");
             embed.AddField ("GitHub", "Você pode encontrar o código fonte aqui https://github.com/skalavala/HassBot");
 
