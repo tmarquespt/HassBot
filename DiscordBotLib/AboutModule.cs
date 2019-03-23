@@ -32,15 +32,16 @@ namespace DiscordBotLib
 
         private async Task AboutCommand() {
             var embed = new EmbedBuilder();
-            embed.WithTitle("Hello! This is @HassBot, written by @skalavala \n");
+            embed.WithTitle("Bem-vindo! Eu sou @CPHAbot \n");
+            embed.WithTitle("Se tiverem alguma ideias para o meu desenvolvimento contactem @Tiago \n");
             embed.WithColor(Helper.GetRandomColor());
-            embed.AddInlineField("Up Since", $"{ GetUptime() }");
-            embed.AddInlineField("Total Users", $"{Context.Client.Guilds.Sum(g => g.Users.Count)}");
+            embed.AddInlineField("Ligado desde", $"{ GetUptime() }");
+            embed.AddInlineField("Total de usuários", $"{Context.Client.Guilds.Sum(g => g.Users.Count)}");
             embed.AddInlineField("Heap Size", $"{GetHeapSize()} MiB");
-            embed.AddInlineField("Memory", $"{ GetMemoryUsage() }");
-            embed.AddInlineField("Discord Lib Version", $"{ GetLibrary() }");
-            embed.AddInlineField("Latency", $" { GetLatency() }");
-            embed.AddField("GitHub", "You can find the source code here https://github.com/skalavala/HassBot");
+            embed.AddInlineField("Memoria", $"{ GetMemoryUsage() }");
+            embed.AddInlineField("Discord Bibloteca Versão", $"{ GetLibrary() }");
+            embed.AddInlineField("Latencia", $" { GetLatency() }");
+            embed.AddField ("GitHub", "Você pode encontrar o código fonte aqui https://github.com/skalavala/HassBot")
 
             // mention users if any
             string mentionedUsers = base.MentionedUsers();
