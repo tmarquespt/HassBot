@@ -55,80 +55,80 @@ namespace DiscordBotLib
         public static readonly string USAGE_JSON2YAML =
                 "`~json2yaml <json code>`";
         public static readonly string USAGE_SUBSCRIBE =
-                "`~subscribe <tag>` to subscribe\n`~subscribe list` to see all subscribed tags.";
+                "`~inscreva-se<tag> `para assinar \ n` ~lista de inscrição` para ver todas as tags inscritas.";
         public static readonly string USAGE_UNSUBSCRIBE =
-                "`~unsubscribe <tag>` to unsubscribe\n`~unsubscribe all` to clear everything!";
+                "`~cancele a inscrição <tag> `para cancelar a assinatura \ n` ~ cancelar a assinatura all` para limpar tud";
         public static readonly string USAGE_YAML =
-                "Try the following:\n~yaml? \\`\\`\\`yaml\ncode\n\\`\\`\\`";
+                "Tente o seguinte:\n~yaml? \\`\\`\\`yaml\ncode\n\\`\\`\\`";
 
         /// <summary>
         /// Command Specific Messages
         /// </summary>
         public static readonly string SEEN_MESSAGE_FORMAT =
-                "**{0} is away** for {1} with a message :point_right: {2}";
+                "**{0} está ausente** for {1} com uma mensagem :point_right: {2}";
         public static readonly string AWAY_MESSAGE_FORMAT =
-                "{0} is away! {1} :wave:";
+                "{0} está ausente! {1} :wave:";
         public static readonly string ACCESS_DENIED =
-                "Access Denied";
+                "Acesso negado";
         public static readonly string ACCESS_DENIED_MESSAGE =
-                "You do not have permissions to run this command. Please contact @skalavala to get access.";
+                "Você não tem permissões para executar este comando.Por favor, entre em contato com @Tiago para ter acesso.";
         public static readonly string COMMAND_TOTAL =
-                "There are `{0}` custom command(s) available. ";
+                "Existem `{0}` comando (s) personalizado (s) disponíveis.";
         public static readonly string SUCCESS =
                 "Successo!";
         public static readonly string COMMAND_SUCCESS_MESSAGE =
-                "Go ahead and run the command using `~{0}`";
+                "Vá em frente e execute o comando usando `~{0}`";
         public static readonly string TITLE_SUBSCRIBE =
-                "Subscreve;
+                "Subscreve";
         public static readonly string TITLE_UNSUBSCRIBE =
-                "Unsubscribe";
+                "Cancelar subscrição";
         public static readonly string ERROR_NO_SUBSCRIPTIONS =
-                "You do not have any subscriptions currently.";
+                "Você não tem nenhuma inscrição atualmente.";
         public static readonly string INFO_TAG_EXISTS =
-                "The tag '{0}' is already in your subscription list.";
+                "A tag '{0}' já está na sua lista de inscrição.";
         public static readonly string INFO_SUBSCRIPTION_SUCCESS =
-                "Subscribed to tag '{0}' successfully.";
+                "Subscreveu a tag '{0}' com sucesso.";
         public static readonly string INFO_CURRENT_SUBSCRIPTIONS =
-                "Your current subscriptions are: {0}";
+                "Suas assinaturas atuais são: {0}";
         public static readonly string INFO_UNSUBSCRIBE_ALL_SUCCESS =
-                "Successfully unsubscribed to all tags.";
+                "Não foi possível cancelar a inscrição em todas as tag.";
         public static readonly string INFO_NOT_SUBSCRIBED =
-                "You have not subscribed to '{0}'.";
+                "Você não se inscreveu em'{0}'.";
         public static readonly string INFO_UNSUBSCRIBE_SUCCESS =
-                "Successfully unsubscribed to '{0}'.";
+                "Não inscrito com sucesso em '{0}'.";
 
         public static readonly string MAXLINELIMITMESSAGE =
-            "Attention!: Please use <https://www.hastebin.com> to share code that is more than 10-15 lines. You have been warned, {0}!;";
+            "Atenção !: Por favor, use <https://www.hastebin.com> para compartilhar o código que é mais do que 10-15 linhas. Você foi avisado, {0}!;";
 
         public static readonly string COMMAND_REFRESH_SUCCESSFUL =
-                "Commands, Sitemap and Blocked Domains are reloaded and ready to go!";
+                "Comandos, Sitemap e domínios bloqueados são recarregados e prontos para serem usados!";
         public static readonly string COMMAND_REFRESH_FAILED =
-                "Failed to refresh lookup data! contact @skalavala at https://www.github.com/skalavala";
+                "Falha ao atualizar os dados de pesquisa! contato @Tiago at https://github.com/tmarquespt/HassBot";
 
         public static readonly string COMMAND_MESSAGE =
-                "Manage Hassbot data online at <https://github.com/awesome-automations/hassbot-data>. Make sure you run `~command refresh` after updating data online.";
+                "Gerencie os dados online do Hassbot em <https://github.com/awesome-automations/hassbot-data>. Make sure you run `~command refresh` after updating data online.";
         public static readonly string GOOD_YAML =
-                "That is a perfectly valid YAML!";
+                "Isso é perfeitamente válido YAML!";
         public static readonly string INVALID_YAML =
-                "Invalid YAML! Error: {1}";
+                "Invalido YAML! Erro: {1}";
         public static readonly string WELCOME_TITLE =
-                "Welcome";
+                "Bem-vindo";
         public static readonly string WELCOME_MESSAGE =
-                "Welcome to {0} Discord Channel!";
+                "Bem-vindo ao {0} Discord Chanal!";
         public static readonly string WELCOME_RULES_MESSAGE =
-                "Please read {0} \n";
+                "Por favor leia {0} \n";
         public static readonly string CODE_SHARING_MESSAGE =
-                "For sharing code, please use <https://www.hastebin.com>\nIf it is less than 10 lines of code, **make sure** it is formatted using below format:\n\\`\\`\\`yaml\ncode\n\\`\\`\\`\n";
+                "Para compartilhar código, por favor use <https://www.hastebin.com>\nSe tiver menos de 10 linhas de código, ** certifique-se, ** é formatado usando o formato abaixo:\n\\`\\`\\`yaml\ncode\n\\`\\`\\`\n";
         public static readonly string FORMAT_CODE =
-                "Format Code";
+                "Código de formato";
         public static readonly string LET_ME_GOOGLE =
-                "Let me Google that for you...";
+                "Deixe-me procurar no Google para voce...";
         public static readonly string BAN_MESSAGE =
-                "User **{0}** got permanently banned for posting {1}.";
+                "Utilizador **{0}** foi banido permanentemente por postar {1}.";
         public static readonly string ERROR_BLOCKED_URL =
-                "{0} Your message has been deleted as it contains a link or a domain name '{1}' that is on the blocked list because of: '**{2}**'.\nPlease re-post by removing/changing the domain name/link. Your original message has been DM'ed to you.";
+                "{0} Sua mensagem foi excluída porque contém um link ou um nome de domínio '{1}' que está na lista de bloqueados devido a: '** {2} **'. \ NPor favor, refaça a postagem removendo / alterando o nome de domínio / link.Sua mensagem original foi enviada para você.";
         public static readonly string USER_MESSAGE_BLOCKED_URL =
-                "Here is your original message you posted earlier that was blocked. You can re-post by removing/changing the domain name/link: {0}\nReason for deletion: **{1}**\nYour message: {2}";
+                "Aqui está sua mensagem original que você postou anteriormente que foi bloqueada.Você pode postar novamente removendo / alterando o nome de domínio / link: { 0} \ nReason para exclusão: ** {1} ** \ nSua mensagem: {2} "
 
         /// <summary>
         /// Emojis
