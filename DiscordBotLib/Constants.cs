@@ -79,7 +79,7 @@ namespace DiscordBotLib
         public static readonly string COMMAND_SUCCESS_MESSAGE =
                 "Go ahead and run the command using `~{0}`";
         public static readonly string TITLE_SUBSCRIBE =
-                "Subscribe";
+                "Subscreve;
         public static readonly string TITLE_UNSUBSCRIBE =
                 "Unsubscribe";
         public static readonly string ERROR_NO_SUBSCRIPTIONS =
