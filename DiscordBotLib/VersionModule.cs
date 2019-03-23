@@ -73,13 +73,13 @@ namespace DiscordBotLib
             HassIOVersion stable = GetHassIOVersion(HassioRelease.Stable);
 
             var embed = new EmbedBuilder();
-            embed.WithTitle("Here are the current HASSIO software versions.\n");
+            embed.WithTitle("Aqui estão as versões atuais do software Home Assistant.\n");
             embed.WithColor(Helper.GetRandomColor());
 
             if (null != stable) {
-                embed.AddInlineField("Stable", stable.HassOS);
-                embed.AddInlineField("Stable Supervisor", stable.Supervisor);
-                embed.AddInlineField("Stable Home Assistant", stable.HomeAssistant);
+                embed.AddInlineField("Estável", stable.HassOS);
+                embed.AddInlineField("Estável Supervisor", stable.Supervisor);
+                embed.AddInlineField("Estável Home Assistant", stable.HomeAssistant);
             }
 
             if (null != beta) {
