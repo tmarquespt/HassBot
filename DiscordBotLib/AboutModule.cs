@@ -33,7 +33,6 @@ namespace DiscordBotLib
         private async Task AboutCommand() {
             var embed = new EmbedBuilder();
             embed.WithTitle("Bem-vindo! Eu sou @CPHAbot \n");
-            embed.AddField ("Se tiverem alguma ideias para o meu desenvolvimento contactem @Tiago \n");
             embed.WithColor(Helper.GetRandomColor());
             embed.AddInlineField("Ligado desde", $"{ GetUptime() }");
             embed.AddInlineField("Total de usuários", $"{Context.Client.Guilds.Sum(g => g.Users.Count)}");
