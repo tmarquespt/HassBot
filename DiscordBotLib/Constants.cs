@@ -55,9 +55,9 @@ namespace DiscordBotLib
         public static readonly string USAGE_JSON2YAML =
                 "`~json2yaml <json code>`";
         public static readonly string USAGE_SUBSCRIBE =
-                "`~inscreva-se<tag> `para assinar \ n` ~lista de inscrição` para ver todas as tags inscritas.";
+                "`~inscreva-se<tag> `para assinar \n`~lista de inscrição` para ver todas as tags inscritas.";
         public static readonly string USAGE_UNSUBSCRIBE =
-                "`~cancele a inscrição <tag> `para cancelar a assinatura \ n` ~ cancelar a assinatura all` para limpar tud";
+                "`~cancele a inscrição <tag> `para cancelar a assinatura \n`~ cancelar a assinatura all` para limpar tud";
         public static readonly string USAGE_YAML =
                 "Tente o seguinte:\n~yaml? \\`\\`\\`yaml\ncode\n\\`\\`\\`";
 
