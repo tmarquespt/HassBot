@@ -71,7 +71,7 @@ namespace DiscordBotLib
         public static readonly string ACCESS_DENIED =
                 "Acesso negado";
         public static readonly string ACCESS_DENIED_MESSAGE =
-                "Você não tem permissões para executar este comando.Por favor, entre em contato com @Tiago para ter acesso.";
+                "Você não tem permissões para executar este comando.Por favor, entre em contato com @Manager para ter acesso.";
         public static readonly string COMMAND_TOTAL =
                 "Existem `{0}` comando (s) personalizado (s) disponíveis.";
         public static readonly string SUCCESS =
@@ -103,12 +103,12 @@ namespace DiscordBotLib
         public static readonly string COMMAND_REFRESH_SUCCESSFUL =
                 "Comandos, Sitemap e domínios bloqueados são recarregados e prontos para serem usados!";
         public static readonly string COMMAND_REFRESH_FAILED =
-                "Falha ao atualizar os dados de pesquisa! contato @Tiago at https://github.com/tmarquespt/HassBot";
+                "Falha ao atualizar os dados de pesquisa! contato @Manager";
 
         public static readonly string COMMAND_MESSAGE =
                 "Gerencie os dados online do Hassbot em <https://github.com/awesome-automations/hassbot-data>. Make sure you run `~command refresh` after updating data online.";
         public static readonly string GOOD_YAML =
-                "Isso é perfeitamente válido YAML!";
+                "Isso é código YAML perfeitamente válido!";
         public static readonly string INVALID_YAML =
                 "Invalido YAML! Erro: {1}";
         public static readonly string WELCOME_TITLE =
@@ -124,11 +124,11 @@ namespace DiscordBotLib
         public static readonly string LET_ME_GOOGLE =
                 "Vamos procurar no Google por ti...";
         public static readonly string BAN_MESSAGE =
-                "Utilizador **{0}** foi banido permanentemente por postar {1}.";
+                "Utilizador **{0}** foi banido permanentemente por publicar {1}.";
         public static readonly string ERROR_BLOCKED_URL =
                 "{0} Sua mensagem foi excluída porque contém um link ou um nome de domínio '{1}' que está na lista de bloqueados devido a: '** {2} **'.\nPor favor, refaça a postagem removendo / alterando o nome de domínio / link.Sua mensagem original foi enviada para você.";
         public static readonly string USER_MESSAGE_BLOCKED_URL =
-                "Aqui está sua mensagem original que você postou anteriormente que foi bloqueada.Você pode postar novamente removendo / alterando o nome de domínio / link: { 0} \nReason para exclusão: ** {1} ** \nSua mensagem: {2} ";
+                "Aqui está sua mensagem original que você postou anteriormente que foi bloqueada.Você pode publicar novamente removendo / alterando o nome de domínio / link: { 0} \nReason para exclusão: ** {1} ** \nSua mensagem: {2} ";
         /// <summary>
         /// Emojis
         /// </summary>
