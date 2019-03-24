@@ -13,39 +13,39 @@ namespace DiscordBotLib
         /// Usage Specific Messages
         /// </summary>
         public static readonly string TITLE_HASSBOT =
-                "HassBot";
+                "CPHAbot";
         public static readonly string USAGE_TITLE =
                 "Usage";
         public static readonly string USAGE_AFK =
-                "`~afk <message>` or `~away <message>` or `~seen <username>`";
+                "`~afk <message>` ou `~away <message>` ou `~seen <username>`";
         public static readonly string USAGE_SEEN =
                 "`~seen <username>`";
         public static readonly string USAGE_EIGHTBALL =
-                "`~8ball <your question>`";
+                "`~8ball <a tua questão>`";
         public static readonly string USAGE_AS =
-                "`~as @user #channel <your message>`";
+                "`~as @user #channel <a tua mensagem>`";
         public static readonly string USAGE_BASE64 =
-                "`~base64_encode <string to encode>` or `~base64_decode <string to decode>`";
+                "`~base64_encode <string to encode>` ou `~base64_decode <string to decode>`";
         public static readonly string USAGE_BREAKINGCHANGES =
-                "`~breaking_changes 82` gives you breaking changes for release 82.0 and it's minor releases";
+                "`~breaking_changes 82` mostra as breaking changes para a versão 0.82.0 e as suas releases";
         public static readonly string USAGE_COMMAND =
-                "`~command add` or `~command refresh` to refresh commands";
+                "`~command add` ou `~command refresh` para refrescar os comandos";
         public static readonly string USAGE_C2F =
-                "`~c2f <numeric value of temperature in celsius>`";
+                "`~c2f <valor numérico de temperatura em graus Celcios>`";
         public static readonly string USAGE_F2C =
-                "`~f2c <numeric value of temperature in fahrenheit>`";
+                "`~f2c <valor numérico de temperatura em graus fahrenheit>`";
         public static readonly string USAGE_VIOLATION =
-                "`~violation pardon @username` to pardon a user's violations.\n`~violation add @user <description of violation>` to add a new violation";
+                "`~violation pardon @username` para perdoar uma violação às regras de um utilizador.\n`~violation add @user <descrição da violação>` para adicionar uma nova violação às regras";
         public static readonly string USAGE_HEX2DEC =
-                "`~hex2dec <decimal value>`";
+                "`~hex2dec <valor decimal>`";
         public static readonly string USAGE_DEC2HEX =
-                "`~dec2hex <hex value>`";
+                "`~dec2hex <valor hexadecimal>`";
         public static readonly string USAGE_BIN2DEC =
-                "`~bin2dec <binary value>`";
+                "`~bin2dec <valor binário>`";
         public static readonly string USAGE_DEC2BIN =
-                "`~dec2bin <decimal value>`";
+                "`~dec2bin <valor decimal>`";
         public static readonly string USAGE_LOOKUP =
-                "`~lookup <keyword> <@ optional user>`";
+                "`~lookup <palavra> <@ optional user>`";
         public static readonly string USAGE_DEEPSEARCH =
                 "`~deepsearch <keyword>`";
         public static readonly string USAGE_LMGTFY =
