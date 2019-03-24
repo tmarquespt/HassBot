@@ -122,14 +122,13 @@ namespace DiscordBotLib
         public static readonly string FORMAT_CODE =
                 "Código de formato";
         public static readonly string LET_ME_GOOGLE =
-                "Deixe-me procurar no Google para voce...";
+                "Vamos procurar no Google por ti...";
         public static readonly string BAN_MESSAGE =
                 "Utilizador **{0}** foi banido permanentemente por postar {1}.";
         public static readonly string ERROR_BLOCKED_URL =
                 "{0} Sua mensagem foi excluída porque contém um link ou um nome de domínio '{1}' que está na lista de bloqueados devido a: '** {2} **'.\nPor favor, refaça a postagem removendo / alterando o nome de domínio / link.Sua mensagem original foi enviada para você.";
         public static readonly string USER_MESSAGE_BLOCKED_URL =
                 "Aqui está sua mensagem original que você postou anteriormente que foi bloqueada.Você pode postar novamente removendo / alterando o nome de domínio / link: { 0} \nReason para exclusão: ** {1} ** \nSua mensagem: {2} ";
-
         /// <summary>
         /// Emojis
         /// </summary>
