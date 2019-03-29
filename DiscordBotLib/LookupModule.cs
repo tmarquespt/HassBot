@@ -45,7 +45,7 @@ namespace DiscordBotLib
             if (result == string.Empty) {
                 embed.WithTitle(string.Format("Pesquisada por '{0}': ", input));
                 embed.WithColor(Helper.GetRandomColor());
-                string msg = string.Format("You may try `~deepsearch {0}`.", input);
+                string msg = string.Format("Podes tentar por `~deepsearch {0}`.", input);
                 embed.AddInlineField("Não encontrei isso! :frowning:", msg);
             }
             else {
