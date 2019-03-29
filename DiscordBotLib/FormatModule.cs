@@ -32,12 +32,10 @@ namespace DiscordBotLib
             if (mentionedUsers.Trim() != string.Empty )
                 sb.Append(mentionedUsers + " ");
 
-            sb.Append("Para formatares o teu texto como código insere três acentos graves ``` na primeira linha, pressiona Enter para uma nova linha, cola o teu código, pressiona Enter novamente para outra nova linha e, por último, outros três acentos graves. Aqui está um exemplo:\n\n");
-            sb.Append(" ");
-            sb.Append("\\`\\`\\`yaml\n");
+            sb.Append("Para formatares o teu texto como código insere três acentos graves na primeira linha, seguido de 'yaml', pressiona Enter para uma nova linha, cola o teu código, pressiona Enter novamente para outra nova linha e, por último, outros três acentos graves. Aqui está um exemplo:\n\n");
+            sb.Append("\\`\\`\\`yaml \n");
             sb.Append("código aqui\n");
             sb.Append("\\`\\`\\`\n");
-            sb.Append(" ");
             sb.Append("Vê o gif animado aqui: <https://bit.ly/2GbfRJE>\n");
             sb.Append(" ");
             sb.Append("** NÃO ** repitas as mensagens. Por favor, edita a mensagem publicada anteriormente. Para saberes como o fazer vê aqui: <http://tiny.cc/kk3k4y>");
