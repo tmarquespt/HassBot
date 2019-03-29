@@ -35,7 +35,7 @@ namespace DiscordBotLib
             {
                 embed.WithTitle(Constants.EMOJI_THUMBSDOWN);
                 embed.WithColor(Helper.GetRandomColor());
-                embed.AddField("Sorry!", "No release changes found for that version!");
+                embed.AddField("Desculpa!", "Não existem alterações nesta versão!");
                 await ReplyAsync(string.Empty, false, embed);
                 return;
             }
