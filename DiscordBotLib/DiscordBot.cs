@@ -110,7 +110,7 @@ namespace DiscordBotLib
         private async Task _client_Disconnected(Exception arg)
         {
             siteMapRefreshTimer.Enabled = false;
-            logger.Warn("O @PHABot foi desconectado... a tentar ligar em 5 segundos.");
+            logger.Warn("O @CPHABot foi desconectado... a tentar ligar em 5 segundos.");
 
             // wait for 5 seconds
             await Task.Delay(5000);
