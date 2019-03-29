@@ -35,7 +35,7 @@ namespace DiscordBotLib
             embed.WithTitle("Bem-vindo! Eu sou @CPHAbot \n");
             embed.WithColor(Helper.GetRandomColor());
             embed.AddInlineField("Ligado desde", $"{ GetUptime() }");
-            embed.AddInlineField("Total de usuários", $"{Context.Client.Guilds.Sum(g => g.Users.Count)}");
+            embed.AddInlineField("Total de utilizadores", $"{Context.Client.Guilds.Sum(g => g.Users.Count)}");
             embed.AddInlineField("Heap Size", $"{GetHeapSize()} MiB");
             embed.AddInlineField("Memoria", $"{ GetMemoryUsage() }");
             embed.AddInlineField("Discord Lib Versão", $"{ GetLibrary() }");
