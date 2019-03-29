@@ -40,7 +40,7 @@ namespace DiscordBotLib
             sb.Append(" ");
             sb.Append("Vê o gif animado aqui: <https://bit.ly/2GbfRJE>\n");
             sb.Append(" ");
-            sb.Append("** NÃO ** repitas as mensagens. Por favor, edita a mensagem publicada anteriormente. Para saberes como o fazer vê aqui: <https://bit.ly/2qOOf1G>");
+            sb.Append("** NÃO ** repitas as mensagens. Por favor, edita a mensagem publicada anteriormente. Para saberes como o fazer vê aqui: <http://tiny.cc/kk3k4y>");
 
             await ReplyAsync(sb.ToString(), false, null);
         }
