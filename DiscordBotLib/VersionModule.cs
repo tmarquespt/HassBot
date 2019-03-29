@@ -51,12 +51,12 @@ namespace DiscordBotLib
             HomeAssistantVersion ha = GetHAVersions();
 
             var embed = new EmbedBuilder();
-            embed.WithTitle("Here are the current Home Assistant software versions.\n");
+            embed.WithTitle("Aqui estão as versões atuais do Home Assistant.\n");
             embed.WithColor(Helper.GetRandomColor());
 
             if (null != ha) {
                 // embed.AddInlineField("As of", DateTime.Now.ToShortDateString());
-                embed.AddInlineField("Stable", ha.Stable);
+                embed.AddInlineField("Estável", ha.Stable);
                 embed.AddInlineField("Beta", ha.Beta);
             }
 
@@ -101,7 +101,7 @@ namespace DiscordBotLib
 
             string json = HassBotUtils.Utils.DownloadURLString(url);
             if (json == string.Empty) {
-                logger.Error("Empty data received when downloading " + url);
+                logger.Error("Dados vazios recebidos durante o download " + url);
                 return null;
             }
 
@@ -121,7 +121,7 @@ namespace DiscordBotLib
         public static HomeAssistantVersion GetHAVersions() {
             string json = HassBotUtils.Utils.DownloadURLString(HA_STABLE);
             if (json == string.Empty) {
-                logger.Error("Empty data received when downloading " + HA_STABLE);
+                logger.Error("Dados vazios recebidos durante o download " + HA_STABLE);
                 return null;
             }
 
