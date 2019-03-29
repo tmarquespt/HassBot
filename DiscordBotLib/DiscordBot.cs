@@ -25,14 +25,14 @@ namespace DiscordBotLib
 
         private static readonly string TOKEN = "token";
         private static readonly string MAX_LINE_LIMIT =           
-            @"Atenção!: Por favor use https://paste.ubuntu.com para compartilhar código ou mensagem com mais de 10-15 linhas. Você foi avisado, {0}!\n
-              Por favor, leia a regra # 6 aqui <#331130181102206976>";
+            @"Atenção!: Por favor usa https://paste.ubuntu.com para partilhares o teu código se tiver mais de 10 linhas. Foste foi avisado, {0}!\n
+              Por favor, lê as regra # 6 aqui <#331130181102206976>";
 
         private static readonly string OLD_HASTEBIN_MESSAGE =
-            "Por favor, siga as regras, {0}! Você tem {1} aviso (s) restante. Você postou uma mensagem ou um código com mais de 15 linhas. Ele foi movido para aqui -> {2}";
+            "Por favor, segue as regras, {0}! Tens {1} aviso (s) restante. Tu colocaste código com mais de 10 linhas. O tei código foi movido para aqui -> {2}";
 
         private static readonly string HASTEBIN_MESSAGE =
-            "{0} postou uma mensagem que é muito longa, ela foi movida para aqui -> {1}";
+            "{0} Colocaste uma mensagem que é muito longa, ela foi movida para aqui -> {1}";
 
         private static readonly log4net.ILog logger =
              log4net.LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
@@ -110,7 +110,7 @@ namespace DiscordBotLib
         private async Task _client_Disconnected(Exception arg)
         {
             siteMapRefreshTimer.Enabled = false;
-            logger.Warn("The @HassBot was disconnected... will try to connect in 5 seconds.");
+            logger.Warn("O @PHABot foi desconectado... a tentar ligar em 5 segundos.");
 
             // wait for 5 seconds
             await Task.Delay(5000);
@@ -236,15 +236,15 @@ namespace DiscordBotLib
         {
             var dmChannel = await context.User.GetOrCreateDMChannelAsync();
             StringBuilder sb = new StringBuilder();
-            sb.Append("\n\nHello there!");
+            sb.Append("\n\nOlá!");
             sb.Append("\n");
-            sb.Append("You are on the verge of getting kicked out of the server for not following the rules. You've been issued 3 warnings already, and you only have 2 left.");
+            sb.Append("Tu estás prestes a ser banido do servidor, por não estares a cumprir as regras. Já foste avisado 3 vezes, restam-te duas.");
             sb.Append("\n");
-            sb.Append("You have repeatedly violated the rules that we all take very seriously. Please pay attention to the rules!");
+            sb.Append("Já violaste muitas vezes as regras do servidor. Por favor lê as regras!");
             sb.Append("\n");
-            sb.Append("Please reach out to any of the mods to get you off of the naughtly list. If these violations continue, you will be kicked out of the server.");
+            sb.Append("Por favor entra em contacto como o @manager. Se continuares a infrigir as regras serás banido permanetemente.");
             sb.Append("\n");
-            sb.Append("Thank you!\n");
+            sb.Append("Obrigado!\n");
 
             await dmChannel.SendMessageAsync(sb.ToString());
 
@@ -258,32 +258,32 @@ namespace DiscordBotLib
             var dmChannel = await context.User.GetOrCreateDMChannelAsync();
             StringBuilder sb = new StringBuilder();
 
-            sb.Append("\n\nHello, there!");
+            sb.Append("\n\nOlá!");
             sb.Append("\n\n");
-            sb.Append("We got a bit of a problem here. We have some ground rules that we **really** like you to follow.");
+            sb.Append("Temos um problema aqui temos regras que gostavamos que **tu** leias.");
             sb.Append("\n");
-            sb.Append("Please make sure you pay **EXTRA** attention to the welcome notes and read descriptions of each channel carefully.");
+            sb.Append("Por favor lê as descrições de cada canal");
             sb.Append("\n\n");
-            sb.Append("You got kicked out of the Discord server for posting code that is more than 15 lines **FOR MORE THAN 5 TIMES**.");
+            sb.Append("Foste kikado do canal por postares código com mais de 15 linhas **Tens mais 5 tentativas**.");
             sb.Append("\n\n");
-            sb.Append("We would love to work with you to help you provide the support you need. For that, we all have to follow the rules and keep it civil.");
+            sb.Append("Gostariamos muito de te dar o suporte que precisas. Para isso, lê as regras e sê cívico");
             sb.Append("\n");
-            sb.Append("Once you had the chance to read and understood the rules, you can simply log back and meet with the awesome community.");
+            sb.Append("Uma vez que leste e compreendeste as regras, podes voltar a entrar na nossa comunidade.");
             sb.Append("\n");
-            sb.Append("To join the server, click on the link again");
+            sb.Append("Para entrar no servidor, clica no link de novo");
             sb.Append("\n");
-            sb.Append("https://discord.gg/c5DvZ4e");
+            sb.Append("https://discord.gg/Mh9mTEA");
             sb.Append("\n\n");
-            sb.Append("Thank you, and hope to see you again!\n");
+            sb.Append("Obrigado, esperamos te ver em breve!\n");
 
             await dmChannel.SendMessageAsync(sb.ToString());
 
             // kick the user
-            await ((SocketGuildUser)message.Author).KickAsync("Posted code walls for more than 5 times.", null);
-            await message.Channel.SendMessageAsync("User " + context.User.Mention + " got kicked out because of posting too many codewalls!");
+            await ((SocketGuildUser)message.Author).KickAsync("Postas te o código mais de 5 vezes.", null);
+            await message.Channel.SendMessageAsync("User " + context.User.Mention + " Foste kikado por postares o código de forma errada  muitas vezes!");
 
             // send a message to #botspam channel as well
-            await HAChannels.ModLogChannel(context).SendMessageAsync("User " + context.User.Mention + " got kicked out for violating rules for more than 5 times!", false, null);
+            await HAChannels.ModLogChannel(context).SendMessageAsync("User " + context.User.Mention + "Foste kickado por não respeitares as regras por mais de 5 vezes", false, null);
 
             // finally clear the violations, so that the user can start fresh
             ViolationsManager.TheViolationsManager.ClearViolationsForUser(context.User.Id);
