@@ -34,7 +34,7 @@ namespace DiscordBotLib
 
             sb.Append("Para formatares o teu texto como código insere três acentos graves ``` na primeira linha, pressiona Enter para uma nova linha, cola o teu código, pressiona Enter novamente para outra nova linha e, por último, outros três acentos graves. Aqui está um exemplo:\n\n");
             sb.Append(" ");
-            sb.Append("\\`\\`\\`\\yaml\n");
+            sb.Append("\\`\\`\\`yaml\n");
             sb.Append("código aqui\n");
             sb.Append("\\`\\`\\`\n");
             sb.Append(" ");
