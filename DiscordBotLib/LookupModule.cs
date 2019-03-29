@@ -43,14 +43,14 @@ namespace DiscordBotLib
 
             var embed = new EmbedBuilder();
             if (result == string.Empty) {
-                embed.WithTitle(string.Format("Searched for '{0}': ", input));
+                embed.WithTitle(string.Format("Pesquisada por '{0}': ", input));
                 embed.WithColor(Helper.GetRandomColor());
                 string msg = string.Format("You may try `~deepsearch {0}`.", input);
-                embed.AddInlineField("Couldn't find it! :frowning:", msg);
+                embed.AddInlineField("Não encontrei isso! :frowning:", msg);
             }
             else {
                 embed.WithColor(Helper.GetRandomColor());
-                embed.AddInlineField("Here is what I found: :smile:", mentionedUsers + result);
+                embed.AddInlineField("Aqui está o que encontrei: :smile:", mentionedUsers + result);
             }
             await ReplyAsync(string.Empty, false, embed);
         }
@@ -70,7 +70,7 @@ namespace DiscordBotLib
 
             if (result.Length > 1900) {
                 result = result.Substring(0, 1850);
-                result += "...\n\nA mensagem é truncada porque é muito longa. Você pode querer alterar os critérios de pesquisa.";
+                result += "...\n\nA mensagem foi bloqueada porque é muito longa. Tens que  alterar os critérios de pesquisa.";
             }
 
             // Send a Direct Message to the User with search information
