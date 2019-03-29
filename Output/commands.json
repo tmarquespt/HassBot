@@ -1125,5 +1125,13 @@
     "CommandAuthor": "<@!284395792800677889>",
     "CommandCreatedDate": "2018-12-17T19:54:00.1234567-00:00",
     "CommandCount": 0
+  },
+  {
+    "CommandName": "polly",
+    "CommandData": "https://forum.cpha.tech/t/como-configurar-o-tts-polly/40l",
+    "CommandAuthor": "<@!284395792800677889>",
+    "CommandCreatedDate": "2018-12-17T19:54:00.1234567-00:00",
+    "CommandCount": 0
   }
+  
 ]
