@@ -4,6 +4,10 @@
     "CommandData": "For help with Hassbot, please visit <https://github.com/skalavala/HassBot#home-assistant-discord-bot>"
   },
   {
+    "CommandName": "rodolfo",
+    "CommandData": "estava a ver que não tinha um comando só para mim...."
+  },  
+  {
     "CommandName": "share",
     "CommandData": "Please use <https://www.hastebin.com/> or <https://paste.ubuntu.com/> to share code."
   },
