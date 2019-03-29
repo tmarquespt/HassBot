@@ -57,9 +57,9 @@ namespace DiscordBotLib
         public static readonly string USAGE_SUBSCRIBE =
                 "`~inscreva-se<tag> `para assinar \n`~lista de inscrição` para ver todas as tags inscritas.";
         public static readonly string USAGE_UNSUBSCRIBE =
-                "`~cancele a inscrição <tag> `para cancelar a assinatura \n`~ cancelar a assinatura all` para limpar tudo";
+                "`~cancela a inscrição <tag> `para cancelar a assinatura \n`~ cancelar a assinatura all` para limpar tudo";
         public static readonly string USAGE_YAML =
-                "Tente o seguinte:\n~yaml? \\`\\`\\`yaml\ncode\n\\`\\`\\`";
+                "Tenta o seguinte:\n~yaml? \\`\\`\\`yaml\ncode\n\\`\\`\\`";
 
         /// <summary>
         /// Command Specific Messages
@@ -77,7 +77,7 @@ namespace DiscordBotLib
         public static readonly string SUCCESS =
                 "Successo!";
         public static readonly string COMMAND_SUCCESS_MESSAGE =
-                "Vá em frente e execute o comando usando `~{0}`";
+                "Vai em frente e executa o comando usando `~{0}`";
         public static readonly string TITLE_SUBSCRIBE =
                 "Subscreve";
         public static readonly string TITLE_UNSUBSCRIBE =
