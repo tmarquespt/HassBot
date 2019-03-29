@@ -71,7 +71,7 @@ namespace DiscordBotLib
         public static readonly string ACCESS_DENIED =
                 "Acesso negado";
         public static readonly string ACCESS_DENIED_MESSAGE =
-                "Você não tem permissões para executar este comando.Por favor, entre em contato com @Manager para ter acesso.";
+                "Não tens permissões para executar este comando.Por favor, entra em contato com @Manager para ter acesso.";
         public static readonly string COMMAND_TOTAL =
                 "Existem `{0}` comando (s) personalizado (s) disponíveis.";
         public static readonly string SUCCESS =
@@ -83,22 +83,22 @@ namespace DiscordBotLib
         public static readonly string TITLE_UNSUBSCRIBE =
                 "Cancelar subscrição";
         public static readonly string ERROR_NO_SUBSCRIPTIONS =
-                "Você não tem nenhuma inscrição atualmente.";
+                "Não tens nenhuma inscrição atualmente.";
         public static readonly string INFO_TAG_EXISTS =
-                "A tag '{0}' já está na sua lista de inscrição.";
+                "A tag '{0}' já está na tua lista de inscrição.";
         public static readonly string INFO_SUBSCRIPTION_SUCCESS =
-                "Subscreveu a tag '{0}' com sucesso.";
+                "Subscreveste a tag '{0}' com sucesso.";
         public static readonly string INFO_CURRENT_SUBSCRIPTIONS =
-                "Suas assinaturas atuais são: {0}";
+                "As tuas assinaturas atuais são: {0}";
         public static readonly string INFO_UNSUBSCRIBE_ALL_SUCCESS =
                 "Não foi possível cancelar a inscrição em todas as tag.";
         public static readonly string INFO_NOT_SUBSCRIBED =
-                "Você não se inscreveu em'{0}'.";
+                "Tu não te inscreveste em'{0}'.";
         public static readonly string INFO_UNSUBSCRIBE_SUCCESS =
                 "Não inscrito com sucesso em '{0}'.";
 
         public static readonly string MAXLINELIMITMESSAGE =
-            "Atenção !: Por favor, use <https://www.hastebin.com> para compartilhar o código que é mais do que 10-15 linhas. Você foi avisado, {0}!;";
+            "Atenção !: Por favor, usa <https://www.hastebin.com> para partilhares o teu código se tiver mais que 10 linhas. Foste avisado, {0}!;";
 
         public static readonly string COMMAND_REFRESH_SUCCESSFUL =
                 "Comandos, Sitemap e domínios bloqueados são recarregados e prontos para serem usados!";
@@ -106,7 +106,7 @@ namespace DiscordBotLib
                 "Falha ao atualizar os dados de pesquisa! contato @Manager";
 
         public static readonly string COMMAND_MESSAGE =
-                "Gerencie os dados online do Hassbot em <https://github.com/awesome-automations/hassbot-data>. Make sure you run `~command refresh` after updating data online.";
+                "Ger os dados online do Hassbot em <https://github.com/awesome-automations/hassbot-data>. Garante que corres o comando run `~command refresh` sempre que reinicias";
         public static readonly string GOOD_YAML =
                 "Isso é código YAML perfeitamente válido!";
         public static readonly string INVALID_YAML =
@@ -116,9 +116,9 @@ namespace DiscordBotLib
         public static readonly string WELCOME_MESSAGE =
                 "Bem-vindo ao {0} Discord Chanal!";
         public static readonly string WELCOME_RULES_MESSAGE =
-                "Por favor leia {0} \n";
+                "Por favor lê {0} \n";
         public static readonly string CODE_SHARING_MESSAGE =
-                "Para compartilhar código, por favor use <https://www.hastebin.com>\nSe tiver menos de 10 linhas de código, ** certifique-se, ** é formatado usando o formato abaixo:\n\\`\\`\\`yaml\ncode\n\\`\\`\\`\n";
+                "Para partilhares código, por favor usa <https://www.hastebin.com>\nSe tiver menos de 10 linhas de código, ** certifica-te, ** que é formatado usando o formato abaixo:\n\\`\\`\\`yaml\ncode\n\\`\\`\\`\n";
         public static readonly string FORMAT_CODE =
                 "Código de formato";
         public static readonly string LET_ME_GOOGLE =
@@ -126,9 +126,9 @@ namespace DiscordBotLib
         public static readonly string BAN_MESSAGE =
                 "Utilizador **{0}** foi banido permanentemente por publicar {1}.";
         public static readonly string ERROR_BLOCKED_URL =
-                "{0} Sua mensagem foi excluída porque contém um link ou um nome de domínio '{1}' que está na lista de bloqueados devido a: '** {2} **'.\nPor favor, refaça a postagem removendo / alterando o nome de domínio / link.Sua mensagem original foi enviada para você.";
+                "{0} A tua mensagem foi eliminada porque contém um link ou um nome de domínio '{1}' que está na lista de bloqueados devido a: '** {2} **'.\nPor favor, posta de novo removendo / alterando o nome de domínio / link.A tua mensagem original foi enviada para ti.";
         public static readonly string USER_MESSAGE_BLOCKED_URL =
-                "Aqui está sua mensagem original que você postou anteriormente que foi bloqueada.Você pode publicar novamente removendo / alterando o nome de domínio / link: { 0} \nReason para exclusão: ** {1} ** \nSua mensagem: {2} ";
+                "Aqui está a tua mensagem original que usaste anteriormente e que foi bloqueada.Tu podes publicar novamente removendo / alterando o nome de domínio / link: { 0} \nRazão para eliminação: ** {1} ** \nA tua mensagem: {2} ";
         /// <summary>
         /// Emojis
         /// </summary>
