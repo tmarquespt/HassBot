@@ -4,6 +4,10 @@
     "CommandData": "For help with Hassbot, please visit <https://github.com/skalavala/HassBot#home-assistant-discord-bot>"
   },
   {
+    "CommandName": "polly",
+    "CommandData": "Polly wants a cracker \ I think I should get off her first \ I think she wants some water \ To put out the blow torch."
+  },  
+  {
     "CommandName": "rodolfo",
     "CommandData": "estava a ver que não tinha um comando só para mim...."
   },  
