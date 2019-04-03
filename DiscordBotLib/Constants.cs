@@ -114,9 +114,9 @@ namespace DiscordBotLib
         public static readonly string WELCOME_TITLE =
                 "Bem-vindo";
         public static readonly string WELCOME_MESSAGE =
-                "Bem-vindo ao {0} Discord Chanal!";
+                "Bem-vindo ao canal Discord da CPHA!";
         public static readonly string WELCOME_RULES_MESSAGE =
-                "Por favor lê {0} \n";
+                " Por favor lê {0} \n";
         public static readonly string CODE_SHARING_MESSAGE =
                 "Para partilhares código, por favor usa <https://www.hastebin.com>\nSe tiver menos de 10 linhas de código, ** certifica-te, ** que é formatado usando o formato abaixo:\n\\`\\`\\`yaml\ncode\n\\`\\`\\`\n";
         public static readonly string FORMAT_CODE =
