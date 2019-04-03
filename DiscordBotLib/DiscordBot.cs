@@ -32,7 +32,7 @@ namespace DiscordBotLib
             "Please follow the rules, {0}! You have {1} warning(s) left. You posted a message/code that is more than 15 lines. It is moved here --> {2}";
 
         private static readonly string HASTEBIN_MESSAGE =
-            "{0} posted a message that is too long, it is moved here --> {1}";
+            "{0} colocou uma mensagem muito longa, foi movida para aqui --> {1}";
 
         private static readonly log4net.ILog logger =
              log4net.LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
