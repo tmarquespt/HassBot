@@ -106,7 +106,7 @@ namespace DiscordBotLib
                 "Falha ao atualizar os dados de pesquisa! contato @Manager";
 
         public static readonly string COMMAND_MESSAGE =
-                "Ger os dados online do Hassbot em <https://github.com/awesome-automations/hassbot-data>. Garante que corres o comando run `~command refresh` sempre que reinicias";
+                "Gere os dados online do Hassbot em <https://github.com/awesome-automations/hassbot-data>. Garante que corres o comando run `~command refresh` sempre que reinicias";
         public static readonly string GOOD_YAML =
                 "Isso é código YAML perfeitamente válido!";
         public static readonly string INVALID_YAML =
