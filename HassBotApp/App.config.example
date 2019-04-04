@@ -60,8 +60,8 @@
     <add key="afkUsersFile" value="C:\home-assistant\away.json" />
     <add key="deleteHoundBotMsgs" value="true" />
     <add key="serverGuild" value="330944238910963714" />
-    <add key="discordServerName" value="Home Assistant" />
-    <add key="mods" value="skalavala, Tinkerer, Vasiley, dale3h, quadflight, zombu2, Ludeeus" />
+    <add key="discordServerName" value="CPHA.pt" />
+    <add key="mods" value="j_assuncao, Rodolfo Vieira, Tiago, Luis Andrade, MadDoctor, ricain, jpm, Encarnacao" />
     <add key="botspamChannel" value="&lt;#412217573904744448&gt;" />
     <add key="maxLineLimitMessage" value="Attention!: Please use https://www.hastebin.com to share code that is more than 10-15 lines. You have been warned, {0}!&#xD;&#xA;Please read rule #6 here &lt;#331130181102206976&gt;" />
     <add key="welcomerulesChannel" value="&lt;#331130181102206976&gt;" />
