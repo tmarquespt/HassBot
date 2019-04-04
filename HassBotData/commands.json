@@ -1,7 +1,7 @@
 [
   {
     "CommandName": "help",
-    "CommandData": "For help with Hassbot, please visit <https://github.com/skalavala/HassBot#home-assistant-discord-bot>"
+    "CommandData": "Para ajuda com os comandos do CPHAbot, visita a página <http://tiny.cc/0rss4y>"
   },
   {
     "CommandName": "polly",
@@ -10,10 +10,14 @@
   {
     "CommandName": "quebarulheira",
     "CommandData": "deve ser o @MadDoctor#5963 a serrar ossos...."
-  },  
+  },
+  {
+    "CommandName": "regras",
+    "CommandData": "Consulta as nossas regras no canal #regras-de-utilização"
+  },
   {
     "CommandName": "share",
-    "CommandData": "Please use <https://www.hastebin.com/> or <https://paste.ubuntu.com/> to share code."
+    "CommandData": "Para partilhar código extenso usa <https://www.hastebin.com/>, <https://paste.ubuntu.com/> ou similares."
   },
   {
     "CommandName": "z-wave",
