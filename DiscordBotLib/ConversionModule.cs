@@ -65,8 +65,8 @@ namespace DiscordBotLib
             }
 
             double temp_f = ConvertCelsiusToFahrenheit(temp_c);
-            embed.AddInlineField("Celsius To Fahrenheit",
-                string.Format("{0} {1} degrees celsius = {2} degrees fahrenheit!", mentionedUsers, temp_c, temp_f.ToString("#.##")));
+            embed.AddInlineField("Conversão de Centígrados para Fahrenheit",
+                string.Format("{0} {1} graus Centígrados = {2} graus Fahrenheit!", mentionedUsers, temp_c, temp_f.ToString("#.##")));
             await ReplyAsync(string.Empty, false, embed);
         }
 
@@ -88,8 +88,8 @@ namespace DiscordBotLib
             }
 
             double temp_c = ConvertFahrenheitToCelsius(temp_f);
-            embed.AddInlineField("Fahrenheit To Celsius",
-                string.Format("{0} {1} degrees fahrenheit = {2} degrees celsius!", mentionedUsers, temp_f, temp_c.ToString("#.##")));
+            embed.AddInlineField("Conversão de Fahrenheit para Centígrados",
+                string.Format("{0} {1} graus Fahrenheit = {2} graus Centígrados!", mentionedUsers, temp_f, temp_c.ToString("#.##")));
             await ReplyAsync(string.Empty, false, embed);
         }
 
@@ -103,8 +103,8 @@ namespace DiscordBotLib
             string mentionedUsers = base.MentionedUsers();
 
             int decValue = Hex2Decimal(cmd.Trim());
-            embed.AddInlineField("Hex To Decimal",
-                string.Format("{0} '{1}' in hex = '{2}' in decimal", mentionedUsers, cmd.Trim(), decValue));
+            embed.AddInlineField("Conversão de Hexadecimal para Decimal",
+                string.Format("{0} '{1}' em Hexadecimal = '{2}' em Decimal", mentionedUsers, cmd.Trim(), decValue));
             await ReplyAsync(string.Empty, false, embed);
         }
 
@@ -125,8 +125,8 @@ namespace DiscordBotLib
             }
 
             string hexValue = Decimal2Hex(decValue);
-            embed.AddInlineField("Decimal To Hex",
-                string.Format("{0} '{1}' in dec = '{2}' in hex", mentionedUsers, cmd.Trim(), hexValue));
+            embed.AddInlineField("Conversão de Decimal para Hexadecimal",
+                string.Format("{0} '{1}' em Decimal = '{2}' em Hexadecimal", mentionedUsers, cmd.Trim(), hexValue));
             await ReplyAsync(string.Empty, false, embed);
         }
 
@@ -147,8 +147,8 @@ namespace DiscordBotLib
             }
 
             string binValue = Decimal2Binary(decValue);
-            embed.AddInlineField("Decimal To Binary",
-                string.Format("{0} '{1}' in decimal = '{2}' in binary", mentionedUsers, cmd.Trim(), binValue));
+            embed.AddInlineField("Conversão de Decimal para Binário",
+                string.Format("{0} '{1}' em Decimal = '{2}' em Binário", mentionedUsers, cmd.Trim(), binValue));
             await ReplyAsync(string.Empty, false, embed);
         }
 
@@ -161,8 +161,8 @@ namespace DiscordBotLib
             // mention users if any
             string mentionedUsers = base.MentionedUsers();
             int decValue = Binary2Decimal(cmd.Trim());
-            embed.AddInlineField("Decimal To Binary",
-                string.Format("{0} '{1}' in binary = '{2}' in decimal", mentionedUsers, cmd.Trim(), decValue));
+            embed.AddInlineField("Conversão de Binário em Decimal",
+                string.Format("{0} '{1}' em Binário = '{2}' em Decimal", mentionedUsers, cmd.Trim(), decValue));
             await ReplyAsync(string.Empty, false, embed);
         }
 
@@ -191,7 +191,7 @@ namespace DiscordBotLib
 
             }
             catch {
-                return "Unable to convert!";
+                return "Erro na conversão ou impossível de converter!";
             }
         }
 
