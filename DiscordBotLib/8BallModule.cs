@@ -25,18 +25,15 @@ namespace DiscordBotLib
         public async Task Magic8BallAsync([Remainder]string cmd) {
             Random rnd = new Random();
             string[] predictions = {
-                "Como se", "pergunte-me se eu me importo", "pergunta muda peça a outro", "esqueça-o", "obtenha uma pista", "nos teus sonhos",
-                "Não é uma chance", "Obviamente", "Oh, por favor", "Claro", "Isso é ridículo!", "Bem, talvez", "O que você acha?",
-                "Seja qual for", "Quem se importa?", "Sim e eu sou o Papa", "Yeah Right", "Você deseja", "Você so pode estar brincando ...",
-                "Pelo menos eu te amo", "boa tentativa!", "Pure Genius!", "Isso é O.K.", "O limite do céu", "Você é 100% divertido!",
-                "Como eu vejo sim", "Perguntar novamente depois", "Melhor não dizer agora", "Não é possível prever agora",
-                "Concentre-se e pergunte novamente", "Não conte com isso", "É certo", "mais provável", "Minha resposta é não",
-                "Minhas fontes dizem que não", "Outlook bom", "Outlook não é tão bom", "Resposta Hazy tente novamente", "sinais apontam para Sim",
-                "Muito Duvidoso", "Sem Dúvida", "Sim", "Sim - Definitivamente", "Você Pode Confiar Nele", "Absolutamente",
-                "Resposta não clara perguntar depois", "Não é possível prever agora", "Não posso dizer agora", "As chances não são boas",
-                "Consultar-me depois", "Não apostar nele", "Focar e perguntar novamente", "Indicações dizer sim", "parece sim",
-                "No", "No Doubt About It", "Positivamente", "Prospect Good", "So It Shall Be", "As estrelas dizem não",
-                "Improvável", "muito provável", "sim", "você pode contar com isso" };
+                "Sim... Não... Hummm... Talvez... Estou baralhado", "Não quero saber disso para nada", "Que pergunta parva!", "Esqueçe lá isso", "Só nos teus sonhos",
+                "Querias que eu responde-se, não era?", "Nem sim nem não, antes pelo contrário", "Nem penses nisso!", "O que é que tu achas?", "Quero lá saber disso...",
+                "Isso é só parvo", "Pois, pois. E eu sou o Pápa...", "Deves estar a brincar", "Pergunta-me depois, agora estou ocupado",
+                "Tens muita piada! Já pensaste em fazer sitdown comedy? É que se fizeres standup comedy podes cansar as pernas à espera que te batam palmas...",
+                "Sim!", "Claro, que sim!", "Sem duvida que sim!", "Sim e olha que eu nunca me engano e raramente tenho dúvidas", "Yep",
+                "Não!", "Claro que não!", "Sem divida que não!", "Não e olha que eu nunca me engano e raramente tenho dúvidas", "Nope",
+                "Só se não chover", "Não contes com isso", "Não te sei responder a isso", "É isso e couves...", "Não são horas para fazer perguntas dessas! Já viste as horas?!",
+                "Hummm... Depois de consultar a Maya, o prof. Karamba e o Nuno Rogeiro posso afirmar com toda a certeza que a resposta à tua pergunta é... talvez",
+                "Duvido muito" };
 
             var embed = new EmbedBuilder();
             embed.WithTitle(":8ball:");
