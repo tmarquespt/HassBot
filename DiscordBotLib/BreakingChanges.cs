@@ -35,15 +35,17 @@ namespace DiscordBotLib
             {
                 embed.WithTitle(Constants.EMOJI_THUMBSDOWN);
                 embed.WithColor(Helper.GetRandomColor());
-                embed.AddField("Desculpa!", "Não existem alterações nesta versão!");
+                embed.AddField("Desculpa!", "Não existem breaking changes nessa versão!");
                 await ReplyAsync(string.Empty, false, embed);
                 return;
             }
             else
             {
                 if ( url.EndsWith("/"))
+                    embed.AddField("Link para o teu pedido:\n");
                     url += "#breaking-changes";
                 else
+                    embed.AddField("Link para o teu pedido:\n");
                     url += "/#breaking-changes";
             }
 
