@@ -44,10 +44,10 @@ namespace DiscordBotLib
                 ulong id = ulong.Parse(mentionedChannels); ;
                 var chnl = Context.Client.GetChannel(id) as ITextChannel;
                 await chnl.SendMessageAsync(cmd, false, null);
-                logger.Info(string.Format("From {0} in #{1} ==>: {2}", Context.User, chnl.Name, cmd));
+                logger.Info(string.Format("De {0} in #{1} ==>: {2}", Context.User, chnl.Name, cmd));
             }
             else {
-                logger.Info(string.Format("From {0} ==>: {1}", Context.User, cmd));
+                logger.Info(string.Format("De {0} ==>: {1}", Context.User, cmd));
                 await ReplyAsync(cmd, false, null);
             }
         }
