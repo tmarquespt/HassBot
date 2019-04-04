@@ -24,8 +24,8 @@ namespace DiscordBotLib
         private static readonly string YAML_END = @"```";
         private static readonly string JSON_START = @"```json";
         private static readonly string JSON_END = @"```";
-        private static readonly string GOOD_EMOJI = "✅";
-        private static readonly string BAD_EMOJI = "❌";
+        private static readonly string GOOD_EMOJI = ":cpha_yes:";
+        private static readonly string BAD_EMOJI = ":cpha_no:";
 
         private static readonly log4net.ILog logger =
                     log4net.LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
