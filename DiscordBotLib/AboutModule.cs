@@ -32,14 +32,14 @@ namespace DiscordBotLib
 
         private async Task AboutCommand() {
             var embed = new EmbedBuilder();
-            embed.WithTitle("Bem-vindo! Eu sou @CPHAbot \n");
+            embed.WithTitle(":cpha: Bem vindo! Eu sou o @CPHAbot \n");
             embed.WithColor(Helper.GetRandomColor());
             embed.AddInlineField("Ligado desde", $"{ GetUptime() }");
-            embed.AddInlineField("Total de utilizadores", $"{Context.Client.Guilds.Sum(g => g.Users.Count)}");
-            embed.AddInlineField("Heap Size", $"{GetHeapSize()} MiB");
-            embed.AddInlineField("Memoria", $"{ GetMemoryUsage() }");
-            embed.AddInlineField("Discord Lib Versão", $"{ GetLibrary() }");
-            embed.AddInlineField("Latencia", $" { GetLatency() }");
+            embed.AddInlineField("Total de Utilizadores", $"{Context.Client.Guilds.Sum(g => g.Users.Count)}");
+            embed.AddInlineField("Tamanho", $"{GetHeapSize()} MiB");
+            embed.AddInlineField("Memória", $"{ GetMemoryUsage() }");
+            embed.AddInlineField("Versão do DiscordLib", $"{ GetLibrary() }");
+            embed.AddInlineField("Latência", $" { GetLatency() }");
 
             // mention users if any
             string mentionedUsers = base.MentionedUsers();
