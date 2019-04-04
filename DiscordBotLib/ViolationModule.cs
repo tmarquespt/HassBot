@@ -49,11 +49,11 @@ namespace DiscordBotLib
                     bool result = ViolationsManager.TheViolationsManager.ClearViolationsForUser(ulong.Parse(u));
                     if (result)
                     {
-                        await ReplyAsync("O user" + usr + " foi retirado da lista!", false, null);
+                        await ReplyAsync("O utilizador " + usr + " foi retirado da lista!", false, null);
                     }
                     else
                     {
-                        await ReplyAsync("O user " + usr + " não está na lista!", false, null);
+                        await ReplyAsync("O utilizador " + usr + " não está na lista!", false, null);
                     }
                 }
             }
