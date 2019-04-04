@@ -51,12 +51,12 @@ namespace DiscordBotLib
             HomeAssistantVersion ha = GetHAVersions();
 
             var embed = new EmbedBuilder();
-            embed.WithTitle("Aqui estão as versões atuais do Home Assistant.\n");
+            embed.WithTitle("Estas são as versões mais recentes do Home Assistant.\n");
             embed.WithColor(Helper.GetRandomColor());
 
             if (null != ha) {
                 // embed.AddInlineField("As of", DateTime.Now.ToShortDateString());
-                embed.AddInlineField("Estável", ha.Stable);
+                embed.AddInlineField("Stable", ha.Stable);
                 embed.AddInlineField("Beta", ha.Beta);
             }
 
@@ -73,13 +73,13 @@ namespace DiscordBotLib
             HassIOVersion stable = GetHassIOVersion(HassioRelease.Stable);
 
             var embed = new EmbedBuilder();
-            embed.WithTitle("Aqui estão as versões atuais do software HASSIO.\n");
+            embed.WithTitle("Estas são as versões mais recentes do Hassio.\n");
             embed.WithColor(Helper.GetRandomColor());
 
             if (null != stable) {
-                embed.AddInlineField("Estável", stable.HassOS);
-                embed.AddInlineField("Estável Supervisor", stable.Supervisor);
-                embed.AddInlineField("Estável Home Assistant", stable.HomeAssistant);
+                embed.AddInlineField("Stable", stable.HassOS);
+                embed.AddInlineField("Stable Supervisor", stable.Supervisor);
+                embed.AddInlineField("Stable Home Assistant", stable.HomeAssistant);
             }
 
             if (null != beta) {
@@ -101,7 +101,7 @@ namespace DiscordBotLib
 
             string json = HassBotUtils.Utils.DownloadURLString(url);
             if (json == string.Empty) {
-                logger.Error("Dados vazios recebidos durante o download " + url);
+                logger.Error("Erro de comunicação com " + url);
                 return null;
             }
 
@@ -121,7 +121,7 @@ namespace DiscordBotLib
         public static HomeAssistantVersion GetHAVersions() {
             string json = HassBotUtils.Utils.DownloadURLString(HA_STABLE);
             if (json == string.Empty) {
-                logger.Error("Dados vazios recebidos durante o download " + HA_STABLE);
+                logger.Error("Erro de comunicação com " + HA_STABLE);
                 return null;
             }
 
