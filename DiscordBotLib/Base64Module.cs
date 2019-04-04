@@ -30,20 +30,20 @@ namespace DiscordBotLib
         [Command("base64_encode")]
         public async Task Base64EncodeAsync([Remainder]string cmd) {
             var embed = new EmbedBuilder();
-            embed.WithTitle(":rosette:");
+            embed.WithTitle(":cpha_yes:");
             embed.WithColor(Helper.GetRandomColor());
             string data = HassBotUtils.Utils.Base64Encode(cmd);
-            embed.AddField("Base64 Encoded Value:", data);
+            embed.AddField("Codificação para Base64:", data);
             await ReplyAsync(string.Empty, false, embed);
         }
 
         [Command("base64_decode")]
         public async Task Base64DecodeAsync([Remainder]string cmd) {
             var embed = new EmbedBuilder();
-            embed.WithTitle(":rosette:");
+            embed.WithTitle(":cpha_yes:");
             embed.WithColor(Helper.GetRandomColor());
             string data = HassBotUtils.Utils.Base64Decode(cmd);
-            embed.AddField("Base64 Decoded Value:", data);
+            embed.AddField("Desodificação de Base64:", data);
 
             await ReplyAsync(string.Empty, false, embed);
         }
