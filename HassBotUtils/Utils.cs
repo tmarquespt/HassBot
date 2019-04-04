@@ -19,8 +19,8 @@ namespace HassBotUtils
         private static readonly string HASTEBIN_POSTURL = "https://hastebin.com/documents";
         private static readonly string HASTEBIN_RETURN = "https://hastebin.com/{0}";
 
-        private static readonly string ERR_JSON2YAML = "Hmm... isso não parece JSON válido. Não é possível converter para YAML!";
-        private static readonly string ERR_YAML2JSON = "Hmm... isso não parece YAML válido. Não é possível converter para JSON!";
+        private static readonly string ERR_JSON2YAML = "Isso não parece ser código JSON válido. Não é possível efectuar a conversão!";
+        private static readonly string ERR_YAML2JSON = "Isso não parece ser código YAML válido. Não é possível efectuar a conversão!";
 
         private static readonly Random _random = new Random();
         private static readonly log4net.ILog logger =
