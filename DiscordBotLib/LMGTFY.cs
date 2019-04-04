@@ -37,7 +37,7 @@ namespace DiscordBotLib
 
             string encoded = HttpUtility.UrlEncode(cmd.Trim());
             embed.AddInlineField(Constants.LET_ME_GOOGLE,
-                string.Format("Aqui, tenta isto {0} => <http://lmgtfy.com/?q={1}>", mentionedUsers, encoded));
+                string.Format("Vê lá se isto ajuda {0} => <http://lmgtfy.com/?q={1}>", mentionedUsers, encoded));
             await ReplyAsync(string.Empty, false, embed);
         }
     }
