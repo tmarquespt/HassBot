@@ -36,7 +36,7 @@ namespace DiscordBotLib
             if (string.Empty != welcomerulesChannel) {
                 sb.Append(string.Format(Constants.WELCOME_RULES_MESSAGE, "<#" + welcomerulesChannel + ">" ));
             }
-            sb.Append(Constants.CODE_SHARING_MESSAGE);
+            // sb.Append(Constants.CODE_SHARING_MESSAGE);
 
             // mentioned users
             string mentionedUsers = base.MentionedUsers();
