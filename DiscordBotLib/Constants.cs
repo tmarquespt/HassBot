@@ -112,11 +112,11 @@ namespace DiscordBotLib
         public static readonly string INVALID_YAML =
                 ":cpha_no: Código YAML inválido! Erro: {1}";
         public static readonly string WELCOME_TITLE =
-                "Bem vindo";
-        public static readonly string WELCOME_MESSAGE =
                 "Bem vindo ao servidor de Discord da CPHA!";
+        public static readonly string WELCOME_MESSAGE =
+                "Todos os Termos do Serviço/Regras do site e fórum se aplicam aqui.\n\nCaso tenhas alguma duvida contacta um dos nossos Administradores ou Moderadores.";
         public static readonly string WELCOME_RULES_MESSAGE =
-                " Por favor lê {0} \n";
+                " Lê um resumo das Regras no {0} \n";
         public static readonly string CODE_SHARING_MESSAGE =
                 "Para partilhares código, por favor usa <https://www.hastebin.com> ou outro similar.\nSe tiver menos de 10 linhas de código, certifica-te que é formatado do seguinte modo:\n\\`\\`\\`yaml\ncódigo\n\\`\\`\\`\n";
         public static readonly string FORMAT_CODE =
@@ -143,7 +143,7 @@ namespace DiscordBotLib
         public static readonly string EMOJI_THERMOMETER =
                 ":thermometer:";
         public static readonly string EMOJI_NAMASTE =
-                ":pray:";
+                ":cpha:";
         public static readonly string EMOJI_POINT_UP =
                 ":point_up:";
         public static readonly string EMOJI_POINT_DOWN =
