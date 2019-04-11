@@ -42,10 +42,8 @@ namespace DiscordBotLib
             else
             {
                 if ( url.EndsWith("/"))
-                    embed.AddField("Link para o teu pedido:\n");
                     url += "#breaking-changes";
                 else
-                    embed.AddField("Link para o teu pedido:\n");
                     url += "/#breaking-changes";
             }
 
