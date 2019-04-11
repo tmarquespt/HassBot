@@ -4,10 +4,6 @@
     "CommandData": "Para ajuda com os comandos do CPHAbot, visita a página <http://tiny.cc/0rss4y>"
   },
   {
-    "CommandName": "p2olly",
-    "CommandData": "<a href="https://forum.cpha.tech/t/como-configurar-o-tts-polly/40">Como configurar o TTS Polly no Home Assistant</a>"
-  },  
-  {
     "CommandName": "quebarulheira",
     "CommandData": "deve ser o @MadDoctor#5963 a serrar ossos...."
   },
