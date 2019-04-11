@@ -5,7 +5,10 @@
   },
   {
     "CommandName": "polly",
-    "CommandData": "<a href="http://www.yahoo.com">here</a>"
+    "CommandData": { 
+    "link_source":"https://www.google.com",
+    "link_text":"Visit Google"
+   }
   },
   {
     "CommandName": "quebarulheira9",
