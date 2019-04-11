@@ -4,8 +4,12 @@
     "CommandData": "Para ajuda com os comandos do CPHAbot, visita a página <http://tiny.cc/0rss4y>"
   },
   {
+    "CommandName": "comboios",
+    "CommandData": "Como saber os horários dos comboios da cp <https://tinyurl.com/y3b7jdvt>"
+  },
+  {
     "CommandName": "polly",
-    "CommandData": "polly2"
+    "CommandData": "Como configurar o TTS Polly no Home Assistant <https://tinyurl.com/y5eqr4zj>"
   },
   {
     "CommandName": "quebarulheira9",
