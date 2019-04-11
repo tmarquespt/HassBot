@@ -5,10 +5,7 @@
   },
   {
     "CommandName": "polly",
-    "CommandData": { 
-    "link_source":"https://www.google.com",
-    "link_text":"Visit Google"
-   }
+    "CommandData": "polly2"
   },
   {
     "CommandName": "quebarulheira9",
