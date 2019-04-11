@@ -16,8 +16,16 @@
     "CommandData": "MadBlinds v2 - Como Controlares os estores eléctricos e “estimares” a sua posição  <https://tinyurl.com/yyjyjxmj>"
   },
   {
-    "CommandName": "quebarulheira9",
-    "CommandData": "deve ser o @MadDoctor#5963 a serrar ossos...."
+    "CommandName": "garagem",
+    "CommandData": "Como abrir a garagem com o comando Original a partir do Home Assistant <https://tinyurl.com/y5s5jf36>"
+  },
+  {
+    "CommandName": "packages",
+    "CommandData": "Como utilizar ficheiros “package” <https://tinyurl.com/y3nbf8ab>"
+  },
+  {
+    "CommandName": "raspassio",
+    "CommandData": "De Hassio para ‘RaspAssio’  <https://tinyurl.com/yxe2f8dt>"
   },
   {
     "CommandName": "regras",
