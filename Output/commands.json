@@ -1,6 +1,6 @@
 [
   {
-    "CommandName": "z-wave2",
+    "CommandName": "ESTE FICHEIRO É LOCAL E AQUI NÃO SERVE PARA NADA",
     "CommandData": "Z-Wave is a low power, low bandwidth, protocol for home automation devices - mostly sensors, switches, and light controls. For details on how to use it in Home Assistant, and the limitations of the Z-Wave mesh network, see <https://home-assistant.io/docs/z-wave/>",
     "CommandAuthor": "<@!332579266623438848>",
     "CommandCreatedDate": "2018-02-07T13:09:40.9274477-05:00",
