@@ -143,7 +143,7 @@ namespace DiscordBotLib
         public static readonly string EMOJI_THERMOMETER =
                 ":thermometer:";
         public static readonly string EMOJI_NAMASTE =
-                ":cpha:";
+                ":round_pushpin:";
         public static readonly string EMOJI_POINT_UP =
                 ":point_up:";
         public static readonly string EMOJI_POINT_DOWN =
