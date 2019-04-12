@@ -114,7 +114,7 @@ namespace DiscordBotLib
         public static readonly string WELCOME_TITLE =
                 "Bem vindo ao servidor de Discord da CPHA!";
         public static readonly string WELCOME_MESSAGE =
-                "Todos os Termos do Serviço/Regras do site e fórum se aplicam aqui.\n\nCaso tenhas alguma dúvida contacta um dos nossos Administradores ou Moderadores.";
+                "Todos os Termos do Serviço/Regras do site e fórum aplicam-se aqui.\n\nCaso tenhas alguma dúvida contacta um dos nossos Administradores ou Moderadores.";
         public static readonly string WELCOME_RULES_MESSAGE =
                 " Lê um resumo das Regras no {0} \n";
         public static readonly string CODE_SHARING_MESSAGE =
