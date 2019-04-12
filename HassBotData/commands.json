@@ -8,6 +8,10 @@
     "CommandData": "Como saber os horários dos comboios da cp <https://tinyurl.com/y3b7jdvt>"
   },
   {
+    "CommandName": "boxgate",
+    "CommandData": "ArMhasSio como instalar o Home Assistant (hassio) em boxs Android  <https://tinyurl.com/y3ehabo2>"
+  },
+  {
     "CommandName": "polly",
     "CommandData": "Como configurar o TTS Polly no Home Assistant <https://tinyurl.com/y5eqr4zj>"
   },
